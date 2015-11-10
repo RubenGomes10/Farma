@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaTest", "FarmaTest\FarmaTest.csproj", "{B869CEE5-8DF8-4998-A115-2382E288FA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaModel", "FarmaModel\FarmaModel.csproj", "{F942F611-B783-44E3-B0C8-D6AE4A7776DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaDAL", "FarmaDAL\FarmaDAL.csproj", "{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B869CEE5-8DF8-4998-A115-2382E288FA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B869CEE5-8DF8-4998-A115-2382E288FA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B869CEE5-8DF8-4998-A115-2382E288FA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B869CEE5-8DF8-4998-A115-2382E288FA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F942F611-B783-44E3-B0C8-D6AE4A7776DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F942F611-B783-44E3-B0C8-D6AE4A7776DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F942F611-B783-44E3-B0C8-D6AE4A7776DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F942F611-B783-44E3-B0C8-D6AE4A7776DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

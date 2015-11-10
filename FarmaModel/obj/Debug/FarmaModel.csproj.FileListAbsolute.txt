@@ -1,0 +1,10 @@
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\FarmaModel.dll.config
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\FarmaModel.dll
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\FarmaModel.pdb
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\EntityFramework.dll
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\EntityFramework.xml
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.csprojResolveAssemblyReference.cache
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.dll
+c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.pdb
