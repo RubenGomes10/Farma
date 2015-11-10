@@ -1,0 +1,52 @@
+﻿<html data-ng-app="FarmaciaApp">
+<head>
+    <meta http-equiv="X-UA-Compatible" Content="IE=edge, chrome=1" />
+    <title>Farmácias</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="Content/amelia-bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="Content/toaster.css" rel="stylesheet" />
+    <link href="Content/loading-bar.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <meta name="viewport" Content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="favicon.ico" rel="shortcut icon" />
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <img src="LOGO.png" , alt="Home" />
+                </p>
+            </div>
+            <!--<div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+            </div>-->
+        </div>
+    </header>
+
+    <div class="flex-mainlayout">
+        <nav>
+            <ul id="menu" class="nav nav-pills" data-target-container="#mainBody">            
+                <li><a href="#/farmacias">Farmácias</a></li>
+                <li><a href="#/clientes">Clientes</a></li>
+            </ul>
+        </nav>
+        <section id="mainBody" class="content-wrapper main-content clear-fix">
+            <div data-ng-view=""></div>
+        </section>
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.4/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/farmaciasController.js"></script>
+<!-- 3rd party libraries -->

@@ -1,0 +1,14 @@
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\FarmaWeb.dll.config
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\FarmaWeb.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\FarmaWeb.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\Newtonsoft.Json.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Web.Http.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\Newtonsoft.Json.xml
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Web.Http.xml
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.csprojResolveAssemblyReference.cache
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.dll
+C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.pdb

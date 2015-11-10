@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaModel", "FarmaModel\Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaDAL", "FarmaDAL\FarmaDAL.csproj", "{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaWeb", "FarmaWeb\FarmaWeb.csproj", "{2CFA2059-1209-41C0-86CE-05DFA4CBCCF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9BABA4-4ECD-43D2-B4C9-C2BB3D4A9C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFA2059-1209-41C0-86CE-05DFA4CBCCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFA2059-1209-41C0-86CE-05DFA4CBCCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFA2059-1209-41C0-86CE-05DFA4CBCCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFA2059-1209-41C0-86CE-05DFA4CBCCF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
