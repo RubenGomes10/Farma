@@ -1,23 +1,21 @@
-﻿<div class="col-md-12">
-    <table st-table="farmacias" class="table table-striped">
-        <thead>
-            <tr>
-                <th st-sort="firstName">Farmácia</th>
-                <th st-sort="lastName">Distrito</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="row in rowCollection">
-                <td>{{row.Nome}}</td>
-                <td>{{row.Distrito | uppercase}}</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5" class="text-center">
-                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
-</div>
+﻿<table st-table="vm.rowCollection" class="table table-striped">
+    <thead>
+        <tr>
+            <th st-sort="Nome" st-skip-natural="true">Farmácia</th>
+            <th st-sort="Distrito" st-skip-natural="true">Distrito</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in vm.rowCollection">
+            <td>{{row.Nome}}</td>
+            <td>{{row.Distrito | uppercase}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" class="text-center">
+                <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

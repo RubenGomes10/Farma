@@ -1,4 +1,9 @@
-﻿/* CSS Reset */
+﻿@charset "UTF-8";
+/* Comandos importantes para o SASS
+$ sass --watch style.scss:style.css --style compressed
+Se n´┐¢o se quiser minified tirasse o compressed
+*/
+/* CSS Reset */
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, em, img, small, strong, sub, sup, var,
 b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
@@ -86,6 +91,22 @@ button {
 
 /* variables */
 /*placeholder, mixins*/
+.no-margin-lateral {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-padding-left {
+  padding-left: 0 !important; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
 html {
   background-color: #e2e2e2;
   margin: 0;
@@ -103,16 +124,21 @@ a {
   color: #333;
   outline: none;
   padding-left: 3px;
-  padding-right: 3px;
-  text-decoration: underline; }
+  padding-right: 3px; }
   a:link, a:visited, a:active, a:hover {
     color: #333; }
   a:hover {
     background-color: #c7d1d6; }
 
 header, footer, hgroup,
-nav, section {
-  display: block; }
+nav {
+  display: inline-block;
+  border: 1px solid red;
+  height: 100%; }
+
+section {
+  display: block;
+  border: 1px solid blue; }
 
 mark {
   background-color: #a6dbed;
@@ -242,35 +268,21 @@ td button {
   margin-right: 4px; }
 
 header {
-  height: 85px;
+  height: 15%;
   width: 100%; }
 
-nav {
-  width: 15%; }
-  nav li a {
-    margin: 0;
-    width: 100%;
-    text-align: left;
-    font-family: "Montserrat", sans-serif; }
-
-#mainBody {
+nav li a {
   margin: 0;
-  padding: 0;
-  width: 85%; }
-
-.flex-mainlayout {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  display: box;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  min-height: 530px; }
+  width: 100%;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: initial; }
 
 .full-width {
   width: 100% !important; }
+
+.full-height {
+  height: 100% !important; }
 
 #pageLoader {
   position: absolute;
@@ -306,10 +318,14 @@ nav {
 .table td, .table th {
   text-align: center; }
 
-.zero-padding {
-  padding: 0 !important; }
-
 .title {
   font-family: 'Montserrat', sans-serif; }
+
+.row-main-content {
+  height: 85%;
+  width: 100%; }
+
+.main-content {
+  height: 100%; }
 
 /*# sourceMappingURL=app.css.map */
