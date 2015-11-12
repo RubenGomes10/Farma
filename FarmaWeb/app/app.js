@@ -1,18 +1,37 @@
 ﻿﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp', ['ngRoute', 'ngResource', 'smart-table'])
-    .config(function ($routeProvider) {
+    angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table'])
+    .config(appConfig);
+
+    appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+        
+    function appConfig ($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/farmacias');
         //se tiver aqui os controllers não é preciso por no HTML
-        $routeProvider.when("/farmacias", {
-            controller: "farmaciasController",
-            templateUrl: "/app/views/farmaciasList.html",
+        //o controller As é para não esquecer para depois se usar o vm dentro do controller
+        $stateProvider
+        .state('farmacias', {
+            url: '/farmacias',
+            templateUrl: '/app/views/farmaciasList.html',
+            controller: 'farmaciasController',
             controllerAs: 'vm'
-        }).when("/distritos", {
-            controller: "distritosController",
-            templateUrl: "/app/views/distritosList.html",
+        })
+        .state('distritos', {
+            url: '/distritos',
+            templateUrl: '/app/views/distritosList.html',
+            controller: 'distritosController',
+            controllerAs: 'vm'
+        })
+        .state('clientes', {
+            url: '/clientes',
+            templateUrl: '/app/views/distritosList.html',
+            controller: 'distritosController',
             controllerAs: 'vm'
         });
-        $routeProvider.otherwise({ redirectTo: "/farmacias" });
-    })
+
+        //$routeProvider.otherwise({ redirectTo: "/farmacias" });
+    }
+
 })();

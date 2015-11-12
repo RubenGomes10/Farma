@@ -11,6 +11,8 @@
         vm.rowCollection =
             [{ Nome: "Franco", Distrito: "Lisboa" },
             { Nome: "Feira", Distrito: "Aveiro" },
+            { Nome: "Feira", Distrito: "Aveiro" },
+            { Nome: "Feira", Distrito: "Aveiro" },
             { Nome: "Beja", Distrito: "Beja" }];
 
     }

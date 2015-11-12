@@ -1,7 +1,6 @@
-﻿@charset "UTF-8";
 /* Comandos importantes para o SASS
 $ sass --watch style.scss:style.css --style compressed
-Se n´┐¢o se quiser minified tirasse o compressed
+Se nao se quiser minified tirasse o compressed
 */
 /* CSS Reset */
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -133,12 +132,12 @@ a {
 header, footer, hgroup,
 nav {
   display: inline-block;
-  border: 1px solid red;
+  border: 0;
   height: 100%; }
 
 section {
   display: block;
-  border: 1px solid blue; }
+  border: 0; }
 
 mark {
   background-color: #a6dbed;
@@ -327,5 +326,14 @@ nav li a {
 
 .main-content {
   height: 100%; }
+
+.table thead th {
+  cursor: pointer; }
+
+.table tbody tr:hover {
+  background-color: #fff; }
+
+#lies {
+  cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */

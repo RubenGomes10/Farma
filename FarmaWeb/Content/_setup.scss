@@ -1,0 +1,74 @@
+/* variables */
+
+$navfont: 'Montserrat', sans-serif;
+$basefont: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+$debug: false;
+
+/*placeholder, mixins*/
+
+@mixin debug-border($debugFlag){
+    @if $debugFlag == true {
+        border: 1px solid red;
+    } @else{
+        border:0;
+    }
+}
+
+@mixin border-radius-mix($rad: 75px){
+    -moz-border-radius: $rad;
+    -webkit-border-radius: $rad;
+    -o-border-radius: $rad;
+    border-radius: $rad;
+    behavior: url(PIE.htc);
+}
+
+@mixin full-height{
+    height: 100%;
+}
+
+@mixin full-width{
+    width: 100%;
+}
+
+@mixin no-padding($side) {
+    @if $side == 'all' {
+        .no-padding {
+            padding: 0 !important;
+        }
+    } @else {
+        .no-padding-#{$side} {
+            padding-#{$side}: 0 !important;
+        }
+    }
+}
+
+@mixin no-margin($side) {
+    @if $side == 'sides' {
+        .no-margin-lateral {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    } @else if $side == 'all' {
+        .no-margin{
+            margin: 0 !important;
+        }
+    }
+    @else {
+        .no-margin-#{$side} {
+            margin-#{$side}: 0 !important;
+        }
+    }
+}
+
+@include no-margin(sides);
+@include no-margin(all);
+@include no-padding(all);
+@include no-padding(left);
+@include no-padding(right);
+
+%transition-all{
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
