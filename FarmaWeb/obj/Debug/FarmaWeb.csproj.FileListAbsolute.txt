@@ -12,3 +12,17 @@ C:\Users\userr\Documents\FarmaProject\FarmaWeb\bin\System.Web.Http.WebHost.xml
 C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.csprojResolveAssemblyReference.cache
 C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.dll
 C:\Users\userr\Documents\FarmaProject\FarmaWeb\obj\Debug\FarmaWeb.pdb
+E:\Repositorios\Farma\FarmaWeb\bin\FarmaWeb.dll.config
+E:\Repositorios\Farma\FarmaWeb\bin\FarmaWeb.dll
+E:\Repositorios\Farma\FarmaWeb\bin\FarmaWeb.pdb
+E:\Repositorios\Farma\FarmaWeb\bin\Newtonsoft.Json.dll
+E:\Repositorios\Farma\FarmaWeb\bin\System.Net.Http.Formatting.dll
+E:\Repositorios\Farma\FarmaWeb\bin\System.Web.Http.dll
+E:\Repositorios\Farma\FarmaWeb\bin\System.Web.Http.WebHost.dll
+E:\Repositorios\Farma\FarmaWeb\bin\Newtonsoft.Json.xml
+E:\Repositorios\Farma\FarmaWeb\bin\System.Net.Http.Formatting.xml
+E:\Repositorios\Farma\FarmaWeb\bin\System.Web.Http.xml
+E:\Repositorios\Farma\FarmaWeb\bin\System.Web.Http.WebHost.xml
+E:\Repositorios\Farma\FarmaWeb\obj\Debug\FarmaWeb.csprojResolveAssemblyReference.cache
+E:\Repositorios\Farma\FarmaWeb\obj\Debug\FarmaWeb.dll
+E:\Repositorios\Farma\FarmaWeb\obj\Debug\FarmaWeb.pdb

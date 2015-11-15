@@ -18,6 +18,12 @@
             controller: 'farmaciasController',
             controllerAs: 'vm'
         })
+        .state('farmacias2', {
+            url: '/farmaciasForm',
+            templateUrl: '/app/views/farmaciasForm.html',
+            controller: 'farmaciasController',
+            controllerAs: 'vm'
+        })
         .state('distritos', {
             url: '/distritos',
             templateUrl: '/app/views/distritosList.html',
@@ -30,8 +36,6 @@
             controller: 'distritosController',
             controllerAs: 'vm'
         });
-
-        //$routeProvider.otherwise({ redirectTo: "/farmacias" });
     }
 
 })();

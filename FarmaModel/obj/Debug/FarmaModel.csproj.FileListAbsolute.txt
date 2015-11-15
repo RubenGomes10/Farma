@@ -8,3 +8,12 @@ c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\bin\De
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.csprojResolveAssemblyReference.cache
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.dll
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaModel\obj\Debug\FarmaModel.pdb
+E:\Repositorios\Farma\FarmaModel\bin\Debug\FarmaModel.dll.config
+E:\Repositorios\Farma\FarmaModel\bin\Debug\FarmaModel.dll
+E:\Repositorios\Farma\FarmaModel\bin\Debug\FarmaModel.pdb
+E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.dll
+E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.xml
+E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\Repositorios\Farma\FarmaModel\obj\Debug\FarmaModel.dll
+E:\Repositorios\Farma\FarmaModel\obj\Debug\FarmaModel.pdb

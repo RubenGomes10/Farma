@@ -3,17 +3,20 @@
 
     angular.module('FarmaciaApp').controller('farmaciasController', FarmaciasController);
 
-    FarmaciasController.$inject = ['$filter'];
-    function FarmaciasController($filter) {
+    FarmaciasController.$inject = ['$filter', 'farmaciasService'];
+    function FarmaciasController($filter, $farmaciasService) {
         var vm = this;
         vm.displayedCollection = [];
+        vm.rowCollection = $farmaciasService.getAll();
+        vm.addForm = addForm;
 
-        vm.rowCollection =
-            [{ Nome: "Franco", Distrito: "Lisboa" },
-            { Nome: "Feira", Distrito: "Aveiro" },
-            { Nome: "Feira", Distrito: "Aveiro" },
-            { Nome: "Feira", Distrito: "Aveiro" },
-            { Nome: "Beja", Distrito: "Beja" }];
+        function addForm() {
+            alert("OK");
+        }
+        ////Para acesso http
+        //vm.rowCollection = $farmaciasService.getAll().success(function(data, status){
+        //    return data;
+        //});
 
     }
 })();

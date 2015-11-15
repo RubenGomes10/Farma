@@ -10,3 +10,15 @@ c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaDAL\bin\Debu
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaDAL\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaDAL\obj\Debug\FarmaDAL.dll
 c:\users\userr\documents\visual studio 2013\Projects\FarmaTest\FarmaDAL\obj\Debug\FarmaDAL.pdb
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\FarmaDAL.dll.config
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\FarmaDAL.dll
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\FarmaDAL.pdb
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\EntityFramework.dll
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\FarmaModel.dll
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\FarmaModel.pdb
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\EntityFramework.xml
+E:\Repositorios\Farma\FarmaDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.csprojResolveAssemblyReference.cache
+E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.dll
+E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.pdb
