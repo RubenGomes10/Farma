@@ -76,10 +76,14 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\distritosController.js" />
     <Content Include="app\controllers\farmaciasController.js" />
+    <Content Include="app\controllers\menuController.js" />
+    <Content Include="app\directives\table-headers.js" />
+    <Content Include="app\directives\tableHeaders.html" />
     <Content Include="app\services\farmaciasService.js" />
     <Content Include="app\views\distritosList.html" />
     <Content Include="app\views\farmaciasForm.html" />
     <Content Include="app\views\farmaciasList.html" />
+    <Content Include="app\views\maincontent.html" />
     <Content Include="Content\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
@@ -922,7 +926,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />

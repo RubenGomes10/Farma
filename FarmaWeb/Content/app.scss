@@ -293,7 +293,11 @@ nav{
     background-color: #fff;
 }
 
-#lies{
-    cursor:pointer;
-
+.pagination>li>a, .pagination>li>span{
+    float: none!important;
 }
+
+.list-buttons{
+    margin-bottom: 15px;
+}
+

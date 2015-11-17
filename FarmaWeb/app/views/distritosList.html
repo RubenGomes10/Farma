@@ -1,21 +1,25 @@
-﻿<div class="col-md-12">
-    <table st-table="farmacias" class="table table-striped">
-        <thead>
-            <tr>
-                <th st-sort="lastName">Distrito</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="row in vm.rowCollection">
-                <td>{{row.Nome}}</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5" class="text-center">
-                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
-</div>
+﻿<table-headers></table-headers>
+<table st-table="farmacias" class="table table-striped">
+    <thead>
+        <tr>
+            <th colspan="1" ng-show="vm.searchEnabled">
+                <input st-search placeholder="Pesquisa..." class="input-sm form-control" type="search" />
+            </th>
+        </tr>
+        <tr>
+            <th st-sort="lastName">Distrito</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in vm.rowCollection">
+            <td>{{row.Nome}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" class="text-center">
+                <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

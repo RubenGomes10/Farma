@@ -32,8 +32,8 @@
         })
         .state('clientes', {
             url: '/clientes',
-            templateUrl: '/app/views/distritosList.html',
-            controller: 'distritosController',
+            templateUrl: '/app/views/farmaciasForm.html',
+            controller: 'farmaciasController',
             controllerAs: 'vm'
         });
     }
