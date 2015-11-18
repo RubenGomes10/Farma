@@ -13,7 +13,7 @@ article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, 
   border: 0;
   outline: 0;
   font-size: 100%;
-  vertical-align: baseline;
+  vertical-align: middle;
   background: transparent; }
 
 article, aside, figure, footer, header, hgroup, nav, section {
@@ -27,7 +27,7 @@ a {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  vertical-align: baseline;
+  vertical-align: middle;
   background: transparent;
   text-decoration: none; }
 
@@ -247,25 +247,26 @@ input[type="checkbox"] {
   border: inherit;
   width: auto; }
 
-input[type="submit"],
-input[type="button"],
-button {
-  background-color: #d3dce0;
-  border: 1px solid #787878;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: 600;
-  padding: 7px;
-  margin-right: 8px;
-  width: auto; }
+    /*input[type="submit"],
+    input[type="button"],
+    button {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        width: auto;
+    }
 
-td input[type="submit"],
-td input[type="button"],
-td button {
-  font-size: 1em;
-  padding: 4px;
-  margin-right: 4px; }
-
+    td input[type="submit"],
+    td input[type="button"],
+    td button {
+        font-size: 1em;
+        padding: 4px;
+        margin-right: 4px;
+    }*/
 header {
   height: 15%;
   width: 100%; }
@@ -338,5 +339,13 @@ nav li a {
 
 .list-buttons {
   margin-bottom: 15px; }
+
+.datepicker-position {
+  margin-bottom: -5px !important;
+  padding: 9px 12px !important; }
+
+[ng-if="showWeeks"] {
+  color: #fff;
+  cursor: default; }
 
 /*# sourceMappingURL=app.css.map */

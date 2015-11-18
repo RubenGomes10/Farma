@@ -1,36 +1,98 @@
-﻿<form class="form-horizontal" role="form" ng-submit="vm.addFarmacy()">
-    <div class="form-group">
-        <div class="form-inline">
-            <label for="title" class="col-md-2 control-label">Tipo de Cliente</label>
-            <div class="col-md-5">
-                <input type="text" ng-model="vm.farmacy.title" class="form-control" id="tipoCliente" />
+﻿<form name="submitFarmacy" ng-submit="vm.addForm()">
+    <fieldset>
+        <legend>Novo </legend>
+        <div class="form-group row">
+            <div class="col-md-3">
+                <label for="tipoCliente">Tipo de Cliente </label>
+                <input type="text" ng-model="vm.form.clientType" class="form-control" id="clientType" />
             </div>
-            <label for="year" class="col-md-2 control-label">Código ANF</label>
-            <div class="col-md-5">
-                <input type="text" ng-model="vm.farmacy.releaseYear" class="form-control" id="codANF" />
+            <div class="col-md-3">
+                <label for="codANF">Código ANF</label>
+                <input type="text" ng-model="vm.form.codANF" class="form-control" id="codANF" />
+            </div>
+            <div class="col-md-3">
+                <label for="clientSAP">Nº Cliente SAP</label>
+                <input type="text" ng-model="vm.form.clientSAP" class="form-control" id="clientSAP" />
+            </div>
+            <div class="col-md-3">
+                <label for="zone">Zona</label>
+                <input type="text" ng-model="vm.form.zone" class="form-control" id="zone" />
             </div>
         </div>
-    </div>
+        <div class="form-group row">
+            <div class="col-md-1 checkbox">
+                <label>
+                    <input type="checkbox" id="active">
+                    Is Active
+                </label>
+            </div>
+            <div class="col-md-3">
+                <label for="reqInicial">Nº Req Inicial</label>
+                <input type="text" ng-model="vm.form.director" class="form-control" id="reqInicial" />
+            </div>
+            <div class="col-md-4" ng-controller="datepickerController as datepicker1">
+                <label for="dataInicio">Data Início Contrato</label>
+                <p class="input-group">
+                    <input id="dataInicio" type="text" class="form-control" uib-datepicker-popup="{{datepicker1.format}}"
+                           ng-model="vm.form.dataInicio" is-open="datepicker1.status.opened"
+                           min-date="datepicker1.minDate" show-button-bar="true" max-date="datepicker1.maxDate"
+                           datepicker1-options="datepicker1.dateOptions" date-disabled="datepicker1.disabled(date, mode)"
+                           close-text="Fechar" date-model-format show-weeks="true" />
+                    <span class="input-group-btn ">
+                        <button type="button" class="btn btn-default datepicker-position" ng-click="datepicker1.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-4" ng-controller="datepickerController as datepicker2">
+                <label for="dataResc">Data Rescisão</label>
+                <p class="input-group">
+                    <input id="dataResctype" type="text" class="form-control" uib-datepicker-popup="{{datepicker2.format}}" ng-model="vm.form.dataResc" is-open="datepicker2.status.opened"
+                           min-date="datepicker2.minDate" max-date="datepicker2.maxDate"
+                           datepicker2-options="datepicker2.dateOptions" date-disabled="datepicker2.disabled(date, mode)"
+                           close-text="Fechar" date-modal-format show-weeks="true" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default datepicker-position" ng-click="datepicker2.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="form-group row">
 
-    <div class="form-group">
-        <label for="director" class="col-md-2 control-label">Nº Cliente SAP</label>
-        <div class="col-md-10">
-            <input type="text" ng-model="vm.farmacy.director" class="form-control" id="clientSAP" />
         </div>
-    </div>
-    <div class="form-group">
-        <label for="zone" class="col-md-2 control-label">Zona</label>
-        <div class="col-md-10">
-            <input type="text" ng-model="vm.farmacy.genre" class="form-control" id="zone" />
+        <!--<div class="form-group">
+            <label for="firstName">Address1 </label>
+            <textarea class="form-control" id="firstName"
+                      placeholder="Please enter address1"></textarea>
         </div>
-        <label for="plot" class="col-md-2 control-label">Movie Genre</label>
-        <div class="col-md-10">
-            <input type="text" ng-model="vm.farmacy.genre" class="form-control" id="zone" placeholder="Zona" />
+        <div class="form-group">
+            <label for="firstName">Address2 </label>
+            <textarea class="form-control" id="firstName"
+                      placeholder="Please enter address2"></textarea>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-primary" value="Save" />
+        <div class="form-group">
+            <label for="firstName">Country </label>
+            <input type="text" class="form-control"
+                   id="firstName" placeholder="Please enter country">
         </div>
-    </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="firstName">State </label>
+                <input type="text" class="form-control"
+                       id="firstName" placeholder="Please enter state">
+            </div>
+            <div class="col-md-6">
+                <label for="firstName">City </label>
+                <input type="text" class="form-control"
+                       id="firstName" placeholder="Please enter city">
+            </div>
+        </div>-->
+        <div class="checkbox">
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12 col-md-offset-4">
+                <input type="submit" class="btn-lg btn btn-primary" value="Save" />
+            </div>
+        </div>
+    </fieldset>
 </form>

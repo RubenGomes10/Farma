@@ -74,9 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\datepickerController.js" />
     <Content Include="app\controllers\distritosController.js" />
     <Content Include="app\controllers\farmaciasController.js" />
     <Content Include="app\controllers\menuController.js" />
+    <Content Include="app\directives\date-model-format.js" />
     <Content Include="app\directives\table-headers.js" />
     <Content Include="app\directives\tableHeaders.html" />
     <Content Include="app\services\farmaciasService.js" />

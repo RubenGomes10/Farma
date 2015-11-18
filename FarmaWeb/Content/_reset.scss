@@ -10,12 +10,12 @@ article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, 
   border:0;
   outline:0;
   font-size:100%;
-  vertical-align:baseline;
+  vertical-align:middle;
   background:transparent;
 }
 article, aside, figure, footer, header, hgroup, nav, section { display:block; } /* Remove if not using HTML5 */
 nav ul { list-style:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none;  }
+a { margin:0; padding:0; font-size:100%; vertical-align:middle; background:transparent; text-decoration: none;  }
 del { text-decoration: line-through; }
 abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
 /* tables still need cellspacing="0" in the markup */
