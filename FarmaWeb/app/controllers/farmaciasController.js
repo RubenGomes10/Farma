@@ -3,7 +3,7 @@
 
     angular.module('FarmaciaApp').controller('farmaciasController', FarmaciasController);
 
-    FarmaciasController.$inject = ['$filter', 'farmaciasService', 'dateFilter'];
+    FarmaciasController.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
     function FarmaciasController($filter, $farmaciasService, dateFilter) {
         var vm = this;
         vm.displayedCollection = [];
@@ -34,6 +34,9 @@
             console.log(vm.form);
         }
 
+        //Datepicker options
+        vm.minDate = new Date(1900, 11, 2);
+        vm.maxDate = new Date(2060, 10, 22);
         ////Para acesso http
         //vm.rowCollection = $farmaciasService.getAll().success(function(data, status){
         //    return data;

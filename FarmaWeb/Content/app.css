@@ -345,7 +345,6 @@ nav li a {
   padding: 9px 12px !important; }
 
 [ng-if="showWeeks"] {
-  color: #fff;
-  cursor: default; }
+  visibility: hidden; }
 
 /*# sourceMappingURL=app.css.map */

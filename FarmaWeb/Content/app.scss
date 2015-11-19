@@ -307,6 +307,5 @@ nav{
 }
 
 [ng-if="showWeeks"]{
-    color:#fff;
-    cursor: default;
+    visibility: hidden;
 }

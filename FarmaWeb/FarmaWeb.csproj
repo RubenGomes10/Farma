@@ -79,13 +79,13 @@
     <Content Include="app\controllers\farmaciasController.js" />
     <Content Include="app\controllers\menuController.js" />
     <Content Include="app\directives\date-model-format.js" />
-    <Content Include="app\directives\table-headers.js" />
-    <Content Include="app\directives\tableHeaders.html" />
+    <Content Include="app\directives\datepicker.js" />
     <Content Include="app\services\farmaciasService.js" />
     <Content Include="app\views\distritosList.html" />
     <Content Include="app\views\farmaciasForm.html" />
     <Content Include="app\views\farmaciasList.html" />
     <Content Include="app\views\maincontent.html" />
+    <Content Include="app\views\_tableHeaders.html" />
     <Content Include="Content\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>

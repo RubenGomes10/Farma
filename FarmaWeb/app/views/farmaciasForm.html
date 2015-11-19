@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-md-1 checkbox">
+            <div class="col-md-3 checkbox">
                 <label>
                     <input type="checkbox" id="active">
                     Is Active
@@ -30,30 +30,13 @@
                 <label for="reqInicial">Nº Req Inicial</label>
                 <input type="text" ng-model="vm.form.director" class="form-control" id="reqInicial" />
             </div>
-            <div class="col-md-4" ng-controller="datepickerController as datepicker1">
-                <label for="dataInicio">Data Início Contrato</label>
-                <p class="input-group">
-                    <input id="dataInicio" type="text" class="form-control" uib-datepicker-popup="{{datepicker1.format}}"
-                           ng-model="vm.form.dataInicio" is-open="datepicker1.status.opened"
-                           min-date="datepicker1.minDate" show-button-bar="true" max-date="datepicker1.maxDate"
-                           datepicker1-options="datepicker1.dateOptions" date-disabled="datepicker1.disabled(date, mode)"
-                           close-text="Fechar" date-model-format show-weeks="true" />
-                    <span class="input-group-btn ">
-                        <button type="button" class="btn btn-default datepicker-position" ng-click="datepicker1.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </p>
+            <div class="col-md-3">
+                <div custom-date-picker control-id="dataInicio" label="Data Início Contrato" model="vm.form.dataInicio"
+                     min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control"></div>
             </div>
-            <div class="col-md-4" ng-controller="datepickerController as datepicker2">
-                <label for="dataResc">Data Rescisão</label>
-                <p class="input-group">
-                    <input id="dataResctype" type="text" class="form-control" uib-datepicker-popup="{{datepicker2.format}}" ng-model="vm.form.dataResc" is-open="datepicker2.status.opened"
-                           min-date="datepicker2.minDate" max-date="datepicker2.maxDate"
-                           datepicker2-options="datepicker2.dateOptions" date-disabled="datepicker2.disabled(date, mode)"
-                           close-text="Fechar" date-modal-format show-weeks="true" />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default datepicker-position" ng-click="datepicker2.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </p>
+            <div class="col-md-3" >
+                <div custom-date-picker control-id="dataInicio" label="Data Rescisão" model="vm.form.dataResc"
+                     min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control"></div>
             </div>
         </div>
         <div class="form-group row">
