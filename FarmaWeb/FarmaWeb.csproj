@@ -74,12 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\datepickerController.js" />
     <Content Include="app\controllers\distritosController.js" />
     <Content Include="app\controllers\farmaciasController.js" />
     <Content Include="app\controllers\menuController.js" />
-    <Content Include="app\directives\date-model-format.js" />
-    <Content Include="app\directives\datepicker.js" />
+    <Content Include="app\directives\dateFormatDirective.js" />
+    <Content Include="app\directives\dropdownDirective.js" />
+    <Content Include="app\directives\datepickerDirective.js" />
     <Content Include="app\services\farmaciasService.js" />
     <Content Include="app\views\distritosList.html" />
     <Content Include="app\views\farmaciasForm.html" />

@@ -14,20 +14,29 @@
             { Link: "distritos", Nome: "Distritos" },
             { Link: "clientes", Nome: "Clientes" }];
 
-        vm.selectedTab = vm.rowCollection[0];
+
         vm.tabClass = tabClass;
-        vm.setSelectedTab = function (tab) {
-            vm.selectedTab = tab;
-        }
+        vm.setSelectedTab = setSelectedTab;
+        vm.getActiveTab = getActiveTab;
         /*******************END****************/
 
-        function tabClass(tab) {
-            if (vm.selectedTab == tab) {
+        function tabClass(tabName) {
+            if (vm.getActiveTab() == tabName) {
                 return "active";
-            } else {
+            }
+            else {
                 return "";
             }
         }
+
+        function setSelectedTab (tabName) {
+            sessionStorage.setItem("activeTab", tabName);
+        }
+
+        function getActiveTab() {
+            var activeTab = sessionStorage.getItem("activeTab");
+            return (typeof (activeTab) === undefined || activeTab !== "null") ? sessionStorage.getItem("activeTab") : vm.rowCollection[0].Nome;
+        };
     }
 
 })();

@@ -309,3 +309,28 @@ nav{
 [ng-if="showWeeks"]{
     visibility: hidden;
 }
+
+custom-dropdown {
+    width:100%;
+
+    .caret{
+        position: absolute;
+        top:15px;
+        right: 5px;
+    }
+
+    .dropdown{
+        margin-top:5px;
+        width: 100%;
+    }
+
+    .dropdown-toggle{
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-menu{
+        width: 100%;
+    }
+
+}

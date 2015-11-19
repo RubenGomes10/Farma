@@ -347,4 +347,19 @@ nav li a {
 [ng-if="showWeeks"] {
   visibility: hidden; }
 
+custom-dropdown {
+  width: 100%; }
+  custom-dropdown .caret {
+    position: absolute;
+    top: 15px;
+    right: 5px; }
+  custom-dropdown .dropdown {
+    margin-top: 5px;
+    width: 100%; }
+  custom-dropdown .dropdown-toggle {
+    width: 100%;
+    text-align: left; }
+  custom-dropdown .dropdown-menu {
+    width: 100%; }
+
 /*# sourceMappingURL=app.css.map */

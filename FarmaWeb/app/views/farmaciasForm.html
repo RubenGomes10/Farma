@@ -1,10 +1,12 @@
-﻿<form name="submitFarmacy" ng-submit="vm.addForm()">
+﻿<form name="submitFarmacy" ng-submit="vm.addForm()" novalidate>
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</uib-alert>
     <fieldset>
         <legend>Novo </legend>
         <div class="form-group row">
             <div class="col-md-3">
-                <label for="tipoCliente">Tipo de Cliente </label>
-                <input type="text" ng-model="vm.form.clientType" class="form-control" id="clientType" />
+                <custom-dropdown label="Tipo de Cliente" model="vm.form.clientType" src="vm.clientTypeDropdown" client-type="vm.clientType"></custom-dropdown>
+                <!--<label for="tipoCliente">Tipo de Cliente </label>
+                <input type="text" ng-model="vm.form.clientType" class="form-control" id="clientType" />-->
             </div>
             <div class="col-md-3">
                 <label for="codANF">Código ANF</label>
@@ -22,7 +24,7 @@
         <div class="form-group row">
             <div class="col-md-3 checkbox">
                 <label>
-                    <input type="checkbox" id="active">
+                    <input type="checkbox" id="active" ng-model="vm.form.active">
                     Is Active
                 </label>
             </div>
@@ -31,50 +33,48 @@
                 <input type="text" ng-model="vm.form.director" class="form-control" id="reqInicial" />
             </div>
             <div class="col-md-3">
-                <div custom-date-picker control-id="dataInicio" label="Data Início Contrato" model="vm.form.dataInicio"
-                     min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control"></div>
+                <custom-datepicker control-id="dataInicio" label="Data Início Contrato" model="vm.form.dataInicio"
+                                   min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control" />
             </div>
-            <div class="col-md-3" >
-                <div custom-date-picker control-id="dataInicio" label="Data Rescisão" model="vm.form.dataResc"
-                     min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control"></div>
-            </div>
-        </div>
-        <div class="form-group row">
+            <div class="col-md-3">
+                <custom-datepicker control-id="dataInicio" label="Data Rescisão" model="vm.form.dataResc"
+                                   min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control">
 
-        </div>
-        <!--<div class="form-group">
-            <label for="firstName">Address1 </label>
-            <textarea class="form-control" id="firstName"
-                      placeholder="Please enter address1"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="firstName">Address2 </label>
-            <textarea class="form-control" id="firstName"
-                      placeholder="Please enter address2"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="firstName">Country </label>
-            <input type="text" class="form-control"
-                   id="firstName" placeholder="Please enter country">
-        </div>
-        <div class="form-group row">
-            <div class="col-md-6">
-                <label for="firstName">State </label>
-                <input type="text" class="form-control"
-                       id="firstName" placeholder="Please enter state">
             </div>
-            <div class="col-md-6">
-                <label for="firstName">City </label>
-                <input type="text" class="form-control"
-                       id="firstName" placeholder="Please enter city">
+            <!--<div class="form-group">
+                <label for="firstName">Address1 </label>
+                <textarea class="form-control" id="firstName"
+                          placeholder="Please enter address1"></textarea>
             </div>
-        </div>-->
-        <div class="checkbox">
+            <div class="form-group">
+                <label for="firstName">Address2 </label>
+                <textarea class="form-control" id="firstName"
+                          placeholder="Please enter address2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Country </label>
+                <input type="text" class="form-control"
+                       id="firstName" placeholder="Please enter country">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="firstName">State </label>
+                    <input type="text" class="form-control"
+                           id="firstName" placeholder="Please enter state">
+                </div>
+                <div class="col-md-6">
+                    <label for="firstName">City </label>
+                    <input type="text" class="form-control"
+                           id="firstName" placeholder="Please enter city">
+                </div>
+            </div>-->
+            <div class="checkbox">
 
-        </div>
-        <div class="form-group">
-            <div class="col-md-12 col-md-offset-4">
-                <input type="submit" class="btn-lg btn btn-primary" value="Save" />
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 col-md-offset-4">
+                    <input type="submit" ng-click="vm.submitted = true" class="btn-lg btn btn-primary" value="Save"/>
+                </div>
             </div>
         </div>
     </fieldset>

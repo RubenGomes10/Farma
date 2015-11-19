@@ -10,6 +10,7 @@
         vm.itemsByPage = 2;
         vm.rowCollection = $farmaciasService.getAll();
         vm.searchEnabled = false;
+        vm.submitted = false;
         vm.form = {
             clientType: '',
             codANF: '',
@@ -41,6 +42,15 @@
         //vm.rowCollection = $farmaciasService.getAll().success(function(data, status){
         //    return data;
         //});
+
+        vm.clientTypeDropdown = $farmaciasService.getClientType();
+
+        vm.clientType = 'Selecione...';
+
+        vm.setClient = function (type) {
+            vm.clientType = type;
+        };
+
 
     }
 })();

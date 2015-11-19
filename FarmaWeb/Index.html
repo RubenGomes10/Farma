@@ -21,7 +21,8 @@
     <main class="row row-main-content no-margin">
         <nav class="col-md-2 no-padding" ng-controller="menuController as menus">
             <ul id="menu" class="nav nav-pills nav-stacked">
-                <li ng-class="menus.tabClass(tab)" ng-repeat="tab in menus.rowCollection" ng-click="menus.setSelectedTab(tab)">
+                <li ng-class="menus.tabClass(tab.Nome)" ng-repeat="tab in menus.rowCollection"
+                    ng-init="menus.setSelectedTab(menus.getActiveTab())" ng-click="menus.setSelectedTab(tab.Nome)">
                     <a ui-sref="{{tab.Link}}">{{tab.Nome}}</a>
                 </li>
             </ul>
@@ -45,8 +46,9 @@
 <script type="text/javascript" src="app/app.js"></script>
 
 <!-- Directives-->
-<script type="text/javascript" src="app/directives/datepicker.js"></script>
-<script type="text/javascript" src="app/directives/date-model-format.js"></script>
+<script type="text/javascript" src="app/directives/datepickerDirective.js"></script>
+<script type="text/javascript" src="app/directives/dateFormatDirective.js"></script>
+<script type="text/javascript" src="app/directives/dropdownDirective.js"></script>
 
 <!-- Services-->
 <script type="text/javascript" src="app/services/farmaciasService.js"></script>
@@ -55,7 +57,6 @@
 <script type="text/javascript" src="app/controllers/farmaciasController.js"></script>
 <script type="text/javascript" src="app/controllers/distritosController.js"></script>
 <script type="text/javascript" src="app/controllers/menuController.js"></script>
-<script type="text/javascript" src="app/controllers/datepickerController.js"></script>
 
 
 <!-- Plugins -->

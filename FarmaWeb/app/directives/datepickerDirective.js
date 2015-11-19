@@ -3,7 +3,7 @@
 
     angular
         .module('FarmaciaApp')
-        .directive('customDatePicker', datepicker);
+        .directive('customDatepicker', datepicker);
 
     function datepicker() {
         var directive = {
