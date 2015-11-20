@@ -10,7 +10,7 @@
             restrict: 'EA',
             scope: {
                 label: '@',
-                //clientType: '=',
+                clientType: '=',
                 model: '=',
                 controlId: '@',
                 isRequired: '@',
@@ -24,7 +24,7 @@
                         +   '{{vm.clientType}} <span class="caret"></span>'
                       +'</button>'
                       +'<ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">'
-                        +'<li role="menuitem" ng-repeat="client in vm.src" ng-click="vm.setClient(client)"><a href="#">{{client.type}}</a></li>'
+                        +'<li role="menuitem" ng-repeat="client in vm.src" ng-click="vm.setClient(client)"><a ng-click="vm.preventDefault($event)" href="##">{{client.type}}</a></li>'
                       +'</ul>'
                     +'</div>',
             controllerAs: 'vm',
@@ -41,6 +41,11 @@
                 vm.clientType = client.type;
                 vm.model = client.id;
             };
+
+            vm.preventDefault = function(event){
+                event.preventDefault();
+
+            }
         }
     }
 

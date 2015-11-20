@@ -11,6 +11,7 @@
         vm.rowCollection = $farmaciasService.getAll();
         vm.searchEnabled = false;
         vm.submitted = false;
+        vm.submitErrors = true;
         vm.form = {
             clientType: '',
             codANF: '',
@@ -31,7 +32,7 @@
             vm.form.dataInicio = $filter('date')(date, 'dd/MM/yyyy');
         }
 
-        vm.addForm = function addForm() {
+        vm.sendForm = function sendForm() {
             console.log(vm.form);
         }
 
