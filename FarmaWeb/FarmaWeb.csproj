@@ -78,7 +78,6 @@
     <Content Include="app\controllers\farmaciasController.js" />
     <Content Include="app\controllers\menuController.js" />
     <Content Include="app\directives\dateFormatDirective.js" />
-    <Content Include="app\directives\formDirective.js" />
     <Content Include="app\directives\dropdownDirective.js" />
     <Content Include="app\directives\datepickerDirective.js" />
     <Content Include="app\directives\validateFormDirective.js" />
@@ -122,6 +121,7 @@
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-ui\angular-locale_pt-pt.js" />
     <Content Include="Scripts\angular-ui\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui\angular-ui-router.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />

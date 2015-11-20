@@ -7,7 +7,7 @@
     function FarmaciasController($filter, $farmaciasService, dateFilter) {
         var vm = this;
         vm.displayedCollection = [];
-        vm.itemsByPage = 2;
+        vm.itemsByPage = 5;
         vm.rowCollection = $farmaciasService.getAll();
         vm.searchEnabled = false;
         vm.submitted = false;

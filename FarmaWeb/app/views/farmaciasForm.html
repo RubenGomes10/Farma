@@ -1,4 +1,4 @@
-﻿<form name="submitFarmacy" validate-form-directive="vm.sendForm()" fn="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
+﻿<form name="form" validate-form-directive="vm.sendForm()" fn="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
     <fieldset>
         <legend>Novo </legend>
         <div class="form-group row">
@@ -7,9 +7,9 @@
                 <!--<label for="tipoCliente">Tipo de Cliente </label>
                 <input type="text" ng-model="vm.form.clientType" class="form-control" id="clientType" />-->
             </div>
-            <div class="col-md-3 form-group">
-                <label for="codANF" ng-class="{'error': form.$submitted && form.codANF.$invalid}">Código ANF</label>
-                <input type="text" ng-model="vm.form.codANF" class="form-control" id="codANF" name="codANF" required />
+            <div class="col-md-3 form-group" ng-class="{'has-error': form.$submitted && form.codANF.$invalid}">
+                <label for="codANF" class="control-label">Código ANF</label>
+                <input type="number" ng-model="vm.form.codANF" class="form-control" id="codANF" name="codANF" required />
             </div>
             <div class="col-md-3">
                 <label for="clientSAP" ng-class="{'error': form.$submitted && form.clientSAP.$invalid}">Nº Cliente SAP</label>
@@ -27,52 +27,25 @@
                     Is Active
                 </label>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" >
                 <label for="reqInicial">Nº Req Inicial</label>
                 <input type="text" ng-model="vm.form.director" class="form-control" id="reqInicial" />
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" ng-class="{'has-error': form.$submitted && form.dataInicio.$invalid}">
                 <custom-datepicker control-id="dataInicio" label="Data Início Contrato" model="vm.form.dataInicio"
                                    min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control" />
             </div>
-            <div class="col-md-3">
-                <custom-datepicker control-id="dataInicio" label="Data Rescisão" model="vm.form.dataResc"
+            <div class="col-md-3" ng-class="{'has-error': form.$submitted && form.dataResc.$invalid}">
+                <custom-datepicker control-id="dataResc" label="Data Rescisão" model="vm.form.dataResc"
                                    min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control">
 
             </div>
-            <!--<div class="form-group">
-                <label for="firstName">Address1 </label>
-                <textarea class="form-control" id="firstName"
-                          placeholder="Please enter address1"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="firstName">Address2 </label>
-                <textarea class="form-control" id="firstName"
-                          placeholder="Please enter address2"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="firstName">Country </label>
-                <input type="text" class="form-control"
-                       id="firstName" placeholder="Please enter country">
-            </div>
-            <div class="form-group row">
-                <div class="col-md-6">
-                    <label for="firstName">State </label>
-                    <input type="text" class="form-control"
-                           id="firstName" placeholder="Please enter state">
-                </div>
-                <div class="col-md-6">
-                    <label for="firstName">City </label>
-                    <input type="text" class="form-control"
-                           id="firstName" placeholder="Please enter city">
-                </div>
-            </div>-->
             <div class="checkbox">
 
             </div>
             <div class="form-group">
                 <div class="col-md-12 col-md-offset-4">
-                    <input type="submit" ng-click="vm.submitted = true" class="btn-lg btn btn-primary" value="Save" />
+                    <input type="submit" ng-click="vm.submitted = true" class="btn-lg btn btn-primary" value="Guardar" />
                 </div>
             </div>
         </div>

@@ -16,7 +16,6 @@
         return directive;
 
         function link(scope, element, attrs, form) {
-            var vm = scope;
             form.$submitted = false;
             var callback = $parse(attrs.validateFormDirective);
             scope.formElement = element;

@@ -16,10 +16,16 @@
             //return $http.get('api/Farmacias/GetAll');
             var list = [];
             list =
-                [{ Nome: "Franco", Distrito: "Lisboa" },
+                [{ Nome: "Cais do Sodre", Distrito: "Lisboa" },
                 { Nome: "Feira", Distrito: "Aveiro" },
+                { Nome: "Porto", Distrito: "Porto" },
                 { Nome: "Feira", Distrito: "Aveiro" },
-                { Nome: "Feira", Distrito: "Aveiro" },
+                { Nome: "Aveiro", Distrito: "Aveiro" },
+                { Nome: "Ourem", Distrito: "Leiria" },
+                { Nome: "Espinho", Distrito: "Aveiro" },
+                { Nome: "Coimbra", Distrito: "Coimbra" },
+                { Nome: "Olhao", Distrito: "Algarve" },
+                { Nome: "Expo", Distrito: "Lisboa" },
                 { Nome: "Beja", Distrito: "Beja" }];
 
             return list;

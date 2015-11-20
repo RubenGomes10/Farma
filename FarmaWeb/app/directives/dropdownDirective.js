@@ -18,7 +18,7 @@
                 src: '='
             },
             template:
-                    '<label for="tipoCliente">{{vm.label}}</label>'
+                    '<label for="tipoCliente" class="control-label">{{vm.label}}</label>'
                     + '<div class="btn-group" uib-dropdown>'
                       + '<button id="vm.controlId" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">'
                         +   '{{vm.clientType}} <span class="caret"></span>'
