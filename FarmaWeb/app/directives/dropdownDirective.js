@@ -7,26 +7,31 @@
 
     function dropdown() {
         var directive = {
-            restrict: 'EA',
+            restrict: 'E',
+            replace: true,
             scope: {
                 label: '@',
-                clientType: '=',
+                value: '@',
                 model: '=',
                 controlId: '@',
                 isRequired: '@',
                 cssClass: '@',
-                src: '='
+                src: '=',
+                form: '='
             },
             template:
-                    '<label for="tipoCliente" class="control-label">{{vm.label}}</label>'
-                    + '<div class="btn-group" uib-dropdown>'
-                      + '<button id="vm.controlId" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">'
-                        +   '{{vm.clientType}} <span class="caret"></span>'
-                      +'</button>'
-                      +'<ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">'
-                        +'<li role="menuitem" ng-repeat="client in vm.src" ng-click="vm.setClient(client)"><a ng-click="vm.preventDefault($event)" href="##">{{client.type}}</a></li>'
-                      +'</ul>'
-                    +'</div>',
+                    '<div class="{{vm.cssClass}}" ng-class="{\'has-error\': vm.form.$submitted && vm.form.{{vm.controlId}}.$invalid}">'
+                        + '<label for="tipoCliente" class="control-label">{{vm.label}}</label>'
+                        + '<div class="btn-group" uib-dropdown>'
+                          + '<button type="button" class="btn btn-default dropdown-button" uib-dropdown-toggle ng-disabled="disabled">'
+                            + '{{vm.value}} <span class="caret"></span>'
+                          + '</button>'
+                          + '<ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">'
+                            + '<li role="menuitem" ng-repeat="dropdownItem in vm.src" ng-click="vm.setValue(dropdownItem)"><a ng-click="vm.preventDefault($event)" href="##">{{dropdownItem.text}}</a></li>'
+                          + '</ul>'
+                          + '<input id="{{vm.controlId}}" name="{{vm.controlId}}" ng-model="vm.model" type="hidden" value ng-required="{{vm.isRequired}}"/>'
+                        + '</div>'
+                    + '</div>',
             controllerAs: 'vm',
             controller: controller,
             bindToController: true
@@ -36,13 +41,14 @@
 
         function controller() {
             var vm = this;
-            vm.clientType = 'Selecione...';
-            vm.setClient = function (client) {
-                vm.clientType = client.type;
-                vm.model = client.id;
+            vm.value = 'Selecione...'; //default text
+            vm.setValue = function (dropdownItem) {
+                vm.value = dropdownItem.text;
+                vm.model = dropdownItem.id;
             };
 
-            vm.preventDefault = function(event){
+            //para evitar alteraçao do hash do URL
+            vm.preventDefault = function (event) {
                 event.preventDefault();
 
             }

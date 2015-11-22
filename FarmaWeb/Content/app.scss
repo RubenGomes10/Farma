@@ -35,11 +35,10 @@ a {
     &:hover {
         background-color: #c7d1d6;
     }
-
 }
 
 header, footer, hgroup,
-nav{
+nav {
     display: inline-block;
     @include debug-border($debug);
     @include full-height;
@@ -99,10 +98,10 @@ h5, h6 {
     font-size: 1em;
 }
 
-    h5 a:link, h5 a:visited, h5 a:active {
-        padding: 0;
-        text-decoration: none;
-    }
+h5 a:link, h5 a:visited, h5 a:active {
+    padding: 0;
+    text-decoration: none;
+}
 
 /* content */
 article {
@@ -115,15 +114,15 @@ aside {
     width: 25%;
 }
 
-    aside ul {
-        list-style: none;
-        padding: 0;
-    }
+aside ul {
+    list-style: none;
+    padding: 0;
+}
 
-        aside ul li {
-            background: url("../Images/bullet.png") no-repeat 0 50%;
-            padding: 2px 0 2px 20px;
-        }
+aside ul li {
+    background: url("../Images/bullet.png") no-repeat 0 50%;
+    padding: 2px 0 2px 20px;
+}
 
 .label {
     font-weight: 700;
@@ -136,18 +135,18 @@ fieldset {
     padding: 0;
 }
 
-    fieldset legend {
-        display: none;
-    }
+fieldset legend {
+    display: none;
+}
 
-    fieldset ol {
-        padding: 0;
-        list-style: none;
-    }
+fieldset ol {
+    padding: 0;
+    list-style: none;
+}
 
-        fieldset ol li {
-            padding-bottom: 5px;
-        }
+fieldset ol li {
+    padding-bottom: 5px;
+}
 
 label {
     display: block;
@@ -174,17 +173,17 @@ textarea {
     width: 500px;
 }
 
-    input:focus, textarea:focus {
-        border: 1px solid #7ac0da;
-    }
+input:focus, textarea:focus {
+    border: 1px solid #7ac0da;
+}
 
-    input[type="checkbox"] {
-        background: transparent;
-        border: inherit;
-        width: auto;
-    }
+input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
 
-    /*input[type="submit"],
+/*input[type="submit"],
     input[type="button"],
     button {
         background-color: #d3dce0;
@@ -207,143 +206,169 @@ textarea {
 
 
 
-header{
+header {
     height: 15%;
     width: 100%;
 }
 
-nav{
+nav {
 
-	li a{
-		margin:0;
-		width: 100%;
-		text-align: left;
-		font-family: $navfont;
+    li a {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        font-family: $navfont;
         text-decoration: initial;
-	}
+    }
 }
 
-.full-width{
-    width: 100%!important;
+.full-width {
+    width: 100% !important;
 }
 
-.full-height{
-    height: 100%!important;
+.full-height {
+    height: 100% !important;
 }
 
-#pageLoader{
-    position:absolute;
-    left:0;
-    top:0;
-    background-color:#000;
+#pageLoader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
     opacity: 0.2;
-    display:block;
+    display: block;
     width: 100%;
-    height:100%;
+    height: 100%;
     z-index: 500000;
     margin: 0 auto;
 
-	&>div {
-		position:relative;
-		background: url("../Images/loader_gif.gif") no-repeat;
-		width:150px;
-		height:150px;
-		left:50%;
-		top:50%;
-		transform: translate(-50%,-50%);
-	}
+    & > div {
+        position: relative;
+        background: url("../Images/loader_gif.gif") no-repeat;
+        width: 150px;
+        height: 150px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 
-.displayNone{
-    display:none!important;
+.displayNone {
+    display: none !important;
 }
 
-.form-submit{
-    margin-top:20px;
+.form-submit {
+    margin-top: 20px;
 }
 
-.alert{
+.alert {
     text-align: center;
     width: 50%;
     margin: 15px auto;
 }
 
-.table td, .table th{
+.table td, .table th {
     text-align: center;
 }
 
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
 }
 
-.row-main-content{
+.row-main-content {
     height: 85%;
     @include full-width;
 }
 
-.main-content{
+.main-content {
     @include full-height;
 }
 
-.table thead th{
+.table thead th {
     cursor: pointer;
 }
 
-.table tbody tr:hover{
+.table tbody tr:hover {
     background-color: #fff;
 }
 
-.pagination>li>a, .pagination>li>span{
-    float: none!important;
+.pagination > li > a, .pagination > li > span {
+    float: none !important;
 }
 
-.list-buttons{
+.list-buttons {
     margin-bottom: 15px;
 }
 
-.datepicker-position{
-    margin-bottom: -5px!important;
-    padding: 9px 12px!important;
+.datepicker-position {
+    margin-bottom: -5px !important;
+    padding: 9px 12px !important;
 }
 
-[ng-if="showWeeks"]{
+[ng-if="showWeeks"] {
     visibility: hidden;
 }
 
-custom-dropdown {
-    width:100%;
+.custom-dropdown {
 
-    .caret{
+    .caret {
         position: absolute;
-        top:15px;
+        top: 15px;
         right: 5px;
     }
 
-    .dropdown{
-        margin-top:5px;
+    .dropdown {
+        margin-top: 5px;
         width: 100%;
     }
 
-    .dropdown-toggle{
+    .dropdown-toggle {
         width: 100%;
         text-align: left;
     }
 
-    .dropdown-menu{
+    .dropdown-menu {
         width: 100%;
     }
-
 }
 
-.has-error .glyph-button{
-  border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+.has-error {
+    .glyph-button {
+        border-color: #a94442;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
+
+    .dropdown-button {
+        border-color: #a94442;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        color: #a94442;
+    }
 }
+
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.page-items {
+    width: 38px;
+    margin-top: 2px;
+}
+
+.checkbox label{
+    line-height: 40px;
+}
+
+.form-group .checkbox{
+    margin-top:17px;
+}
+
+[uib-datepicker-popup-wrap] {
+    padding: 15px!important;
 }

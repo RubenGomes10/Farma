@@ -6,9 +6,11 @@
     FarmaciasService.$inject = ['$http'];
     function FarmaciasService($http) {
         var vm = this;
-        var farmaciasAPI = {};
-        farmaciasAPI.getAll = getAllFarmacias;
-        farmaciasAPI.getClientType = getClientType;
+        var farmaciasAPI = {
+            getAll : getAllFarmacias,
+            getClientType: getClientType,
+            getZone : getZone
+        };
 
 
         function getAllFarmacias() {
@@ -36,11 +38,34 @@
                 [
                     {
                         id: 1,
-                        type: 'Banca'
+                        text: 'Banca'
                     },
                     {
                         id: 2,
-                        type: 'Saude'
+                        text: 'Saude'
+                    }
+                ]
+            return list;
+        }
+
+        function getZone() {
+            var list =
+                [
+                    {
+                        id: 1,
+                        text: 'Continente'
+                    },
+                    {
+                        id: 2,
+                        text: 'Ilhas'
+                    },
+                    {
+                        id: 3,
+                        text: 'PALOP'
+                    },
+                    {
+                        id: 4,
+                        text: 'Internacional'
                     }
                 ]
             return list;

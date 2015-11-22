@@ -80,6 +80,8 @@
     <Content Include="app\directives\dateFormatDirective.js" />
     <Content Include="app\directives\dropdownDirective.js" />
     <Content Include="app\directives\datepickerDirective.js" />
+    <Content Include="app\directives\checkboxDirective.js" />
+    <Content Include="app\directives\textboxDirective.js" />
     <Content Include="app\directives\validateFormDirective.js" />
     <Content Include="app\services\farmaciasService.js" />
     <Content Include="app\views\distritosList.html" />

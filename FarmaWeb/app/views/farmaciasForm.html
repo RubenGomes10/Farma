@@ -1,52 +1,29 @@
-﻿<form name="form" validate-form-directive="vm.sendForm()" fn="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
+﻿<form name="farmaciaForm" validate-form-directive="vm.sendForm()" fn="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
     <fieldset>
-        <legend>Novo </legend>
+        <legend>Farmácia</legend>
         <div class="form-group row">
-            <div class="col-md-3">
-                <custom-dropdown label="Tipo de Cliente" model="vm.form.clientType" src="vm.clientTypeDropdown" client-type="vm.clientType"></custom-dropdown>
-                <!--<label for="tipoCliente">Tipo de Cliente </label>
-                <input type="text" ng-model="vm.form.clientType" class="form-control" id="clientType" />-->
-            </div>
-            <div class="col-md-3 form-group" ng-class="{'has-error': form.$submitted && form.codANF.$invalid}">
-                <label for="codANF" class="control-label">Código ANF</label>
-                <input type="number" ng-model="vm.form.codANF" class="form-control" id="codANF" name="codANF" required />
-            </div>
-            <div class="col-md-3">
-                <label for="clientSAP" ng-class="{'error': form.$submitted && form.clientSAP.$invalid}">Nº Cliente SAP</label>
-                <input type="text" ng-model="vm.form.clientSAP" class="form-control" id="clientSAP" />
-            </div>
-            <div class="col-md-3">
-                <label for="zone">Zona</label>
-                <input type="text" ng-model="vm.form.zone" class="form-control" id="zone" />
-            </div>
+            <custom-dropdown control-id="clientType" label="Tipo de Cliente" model="vm.form.clientType"
+                             src="vm.clientTypeDropdownSrc" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
+            <custom-textbox control-id="codeANF" label="Código ANF" model="vm.form.codeANF" type="text"
+                            is-required="false" form="farmaciaForm" css-class="col-md-3"></custom-textbox>
+            <custom-textbox control-id="clientSAP" label="Nº Cliente SAP" model="vm.form.clientSAP" type="text"
+                            is-required="false" form="farmaciaForm" css-class="col-md-3"></custom-textbox>
+            <custom-dropdown control-id="zone" label="Zona" model="vm.form.zone"
+                             src="vm.zoneDropdownSrc" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
         </div>
         <div class="form-group row">
-            <div class="col-md-3 checkbox">
-                <label>
-                    <input type="checkbox" id="active" ng-model="vm.form.active">
-                    Is Active
-                </label>
-            </div>
-            <div class="col-md-3" >
-                <label for="reqInicial">Nº Req Inicial</label>
-                <input type="text" ng-model="vm.form.director" class="form-control" id="reqInicial" />
-            </div>
-            <div class="col-md-3" ng-class="{'has-error': form.$submitted && form.dataInicio.$invalid}">
-                <custom-datepicker control-id="dataInicio" label="Data Início Contrato" model="vm.form.dataInicio"
-                                   min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control" />
-            </div>
-            <div class="col-md-3" ng-class="{'has-error': form.$submitted && form.dataResc.$invalid}">
-                <custom-datepicker control-id="dataResc" label="Data Rescisão" model="vm.form.dataResc"
-                                   min="vm.minDate" max="vm.maxDate" is-required="true" css-class="form-control">
+            <custom-checkbox control-id="isActive" label="Activo" model="vm.form.isActive" css-class="col-md-3"></custom-checkbox>
+            <custom-textbox control-id="initialReq" label="Nº Req Inicial" model="vm.form.initialReq" type="number"
+                            is-required="true" form="farmaciaForm" css-class="col-md-3"></custom-textbox>
 
-            </div>
-            <div class="checkbox">
-
-            </div>
-            <div class="form-group">
-                <div class="col-md-12 col-md-offset-4">
-                    <input type="submit" ng-click="vm.submitted = true" class="btn-lg btn btn-primary" value="Guardar" />
-                </div>
+            <custom-datepicker control-id="initialDate" label="Data Início Contrato" model="vm.form.initialDate"
+                               min="vm.minDate" max="vm.maxDate" is-required="true" css-class="col-md-3" form="farmaciaForm"></custom-datepicker>
+            <custom-datepicker control-id="rescDate" label="Data Rescisão" model="vm.form.rescDate"
+                               min="vm.minDate" max="vm.maxDate" is-required="true" css-class="col-md-3" form="farmaciaForm"></custom-datepicker>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12 col-md-offset-4">
+                <input type="submit" ng-click="vm.submitted = true" class="btn-lg btn btn-primary" value="Guardar" />
             </div>
         </div>
     </fieldset>
