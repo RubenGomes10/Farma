@@ -18,7 +18,7 @@
             controller: 'farmaciasController',
             controllerAs: 'vm'
         })
-        .state('farmacias2', {
+        .state('createFarmacias', {
             url: '/farmaciasForm',
             templateUrl: '/app/views/farmaciasForm.html',
             controller: 'farmaciasController',

@@ -12,6 +12,8 @@
         vm.searchEnabled = false;
         vm.submitted = false;
         vm.submitErrors = true;
+        vm.createFarmaciasLink = 'createFarmacias';
+        vm.listFarmaciasLink = 'farmacias';
         vm.form = {
             clientType: '',
             codeANF: '',
