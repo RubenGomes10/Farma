@@ -393,4 +393,54 @@ input::-webkit-inner-spin-button {
 [uib-datepicker-popup-wrap] {
   padding: 15px !important; }
 
+.alert {
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  max-height: 0px;
+  text-transform: uppercase; }
+  .alert.alert-temp {
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    display: block !important;
+    opacity: 1;
+    text-transform: uppercase;
+    padding: 15px 15px 15px 15px;
+    max-height: 55px; }
+  .alert button {
+    display: none; }
+
+/*.ng-hide .list-search{
+    @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+    max-height: 0px;
+    
+}
+
+    .list-search{
+        @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+        max-height: 55px;
+        overflow: hidden;
+        
+    }*/
+.list-search {
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  max-height: 55px;
+  overflow: hidden; }
+
+.list-search.ng-hide {
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  max-height: 0px; }
+
 /*# sourceMappingURL=app.css.map */

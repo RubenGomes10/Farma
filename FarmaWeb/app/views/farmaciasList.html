@@ -2,8 +2,10 @@
 <table st-table="vm.rowCollection" class="table table-striped">
     <thead>
         <tr>
-            <th colspan="2" ng-show="vm.searchEnabled">
-                <input st-search placeholder="Pesquisa..." class="input-sm form-control" type="search" />
+            <th colspan="2" >
+                <div class="list-search col-md-2" ng-show="vm.searchEnabled">
+                    <input st-search placeholder="Pesquisa..." class="input-sm form-control" type="search" />
+                </div>
             </th>
         </tr>
         <tr>

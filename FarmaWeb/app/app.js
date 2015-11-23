@@ -1,8 +1,8 @@
 ﻿﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table'])
-    .config(appConfig);
+    angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table', 'ngAnimate'])
+    .config(appConfig)
 
     appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
         

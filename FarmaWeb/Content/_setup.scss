@@ -3,6 +3,9 @@
 $navfont: 'Montserrat', sans-serif;
 $basefont: "Segoe UI", Verdana, Helvetica, Sans-Serif;
 $debug: false;
+$default-trans-time: 0.5s;
+$default-trans-prop: all;
+$default-trans-type: linear;
 
 /*placeholder, mixins*/
 
@@ -42,6 +45,13 @@ $debug: false;
     }
 }
 
+@mixin custom-transition($time, $type, $prop) {
+    -moz-transition: $time $type $prop;
+    -o-transition: $time $type $prop;
+    -webkit-transition: $time $type $prop;
+    transition: $time $type $prop;
+}
+
 @mixin no-margin($side) {
     @if $side == 'sides' {
         .no-margin-lateral {
@@ -65,10 +75,3 @@ $debug: false;
 @include no-padding(all);
 @include no-padding(left);
 @include no-padding(right);
-
-%transition-all{
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}

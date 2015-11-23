@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
     'use strict';
 
     angular
@@ -6,7 +6,7 @@
         .directive('validateFormDirective', validateFormDirective);
 
     validateFormDirective.$inject = ['$parse', '$compile'];
-    
+
     function validateFormDirective($parse, $compile) {
 
         var directive = {
@@ -33,19 +33,26 @@
                         form.$submitted = false;
                     }
                     else {
-                        scope.vm.submitErrors = true;
-                        var alert = angular.element('<uib-alert ng-show="vm.submitErrors" type="danger" dismiss-on-timeout="3000" close="vm.closeAlert()">Certifique-se que preencheu correctamente os campos</uib-alert>');
-                        $('[role=alert]', scope.formElemen).remove();
-                        scope.formElement.prepend(alert);
-                        $compile(alert)(scope);
+                        if ($('[role=alert]', scope.formElement).length <= 0 || $('.alert-temp[role=alert]', scope.formElement).length <= 0) {
+                            scope.vm.submitErrors = true;
+                            var alert = angular.element('<uib-alert type="danger" dismiss-on-timeout="3000" close="vm.closeAlert()">Certifique-se que preencheu correctamente os campos</uib-alert>');
+                            $('[role=alert]', scope.formElement).remove();
+                            scope.formElement.prepend(alert);
+                            $compile(alert)(scope);
+
+                            setTimeout(function () {
+                                $('[role=alert]', scope.formElement).focus().addClass('alert-temp');
+                            }, 10)
+                        }
                     }
                 });
             });
         }
 
-        function controller(){
+        function controller() {
             var vm = this;
             vm.closeAlert = function () {
+                $('[role=alert]', vm.formElement).removeClass('alert-temp');
                 vm.submitErrors = false;
             }
         }

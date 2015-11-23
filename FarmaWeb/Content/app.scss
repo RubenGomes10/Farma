@@ -376,3 +376,54 @@ input::-webkit-inner-spin-button {
 [uib-datepicker-popup-wrap] {
     padding: 15px!important;
 }
+
+.alert {
+    @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    max-height: 0px;
+    text-transform: uppercase;
+
+    &.alert-temp{
+        @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+
+        display: block !important;
+        opacity: 1;
+        text-transform: uppercase;
+        padding: 15px 15px 15px 15px;
+        max-height: 55px;
+    }
+
+    button{
+        display:none;
+    }
+}
+
+/*.ng-hide .list-search{
+    @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+    max-height: 0px;
+    
+}
+
+    .list-search{
+        @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+        max-height: 55px;
+        overflow: hidden;
+        
+    }*/
+
+.list-search{
+@include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+    max-height: 55px;
+    overflow: hidden;
+
+    
+}
+
+.list-search.ng-hide {
+    @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
+
+        max-height: 0px;
+}
