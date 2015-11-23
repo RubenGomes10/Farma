@@ -416,18 +416,6 @@ input::-webkit-inner-spin-button {
   .alert button {
     display: none; }
 
-/*.ng-hide .list-search{
-    @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
-    max-height: 0px;
-    
-}
-
-    .list-search{
-        @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
-        max-height: 55px;
-        overflow: hidden;
-        
-    }*/
 .list-search {
   -moz-transition: 0.5s linear all;
   -o-transition: 0.5s linear all;
@@ -435,12 +423,11 @@ input::-webkit-inner-spin-button {
   transition: 0.5s linear all;
   max-height: 55px;
   overflow: hidden; }
-
-.list-search.ng-hide {
-  -moz-transition: 0.5s linear all;
-  -o-transition: 0.5s linear all;
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-  max-height: 0px; }
+  .list-search.ng-hide {
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    max-height: 0px; }
 
 /*# sourceMappingURL=app.css.map */
