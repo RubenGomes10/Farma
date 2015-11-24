@@ -16,18 +16,19 @@
                 controlId: '@',
                 isRequired: '@',
                 cssClass: '@',
-                src: '=',
-                form: '='
+                source: '=',
+                form: '=',
+                setData: '&'
             },
             template:
-                    '<div class="{{vm.cssClass}}" ng-class="{\'has-error\': vm.form.$submitted && vm.form.{{vm.controlId}}.$invalid}">'
+                    '<div class="{{vm.cssClass}}" ng-init="vm.setData()" ng-class="{\'has-error\': vm.form.$submitted && vm.form.{{vm.controlId}}.$invalid}">'
                         + '<label for="tipoCliente" class="control-label">{{vm.label}}</label>'
                         + '<div class="btn-group" uib-dropdown>'
                           + '<button type="button" class="btn btn-default dropdown-button" uib-dropdown-toggle ng-disabled="disabled">'
                             + '{{vm.value}} <span class="caret"></span>'
                           + '</button>'
                           + '<ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">'
-                            + '<li role="menuitem" ng-repeat="dropdownItem in vm.src" ng-click="vm.setValue(dropdownItem)"><a ng-click="vm.preventDefault($event)" href="##">{{dropdownItem.text}}</a></li>'
+                            + '<li role="menuitem" ng-repeat="dropdownItem in vm.source" ng-click="vm.setValue(dropdownItem)"><a ng-click="vm.preventDefault($event)" href="##">{{dropdownItem.text}}</a></li>'
                           + '</ul>'
                           + '<input id="{{vm.controlId}}" name="{{vm.controlId}}" ng-model="vm.model" type="hidden" value ng-required="{{vm.isRequired}}"/>'
                         + '</div>'

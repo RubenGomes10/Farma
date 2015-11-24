@@ -16,6 +16,7 @@
                 type: '@',
                 isRequired: '@',
                 cssClass: '@',
+                isReadonly: '@',
                 form: '='
             },
             /*O ng-model serve para actualizar directamente o valor no controller quando há alterações em inputs;
@@ -28,7 +29,8 @@
             template:
                 '<div class="{{vm.cssClass}}" ng-class="{\'has-error\': vm.form.$submitted && vm.form.{{vm.controlId}}.$invalid}">' +
                     '<label for="{{vm.controlId}}">{{vm.label}}</label>' +
-                    '<input type="{{vm.type}}" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" name="{{vm.controlId}}" ng-required="{{vm.isRequired}}" />' +
+                    '<input type="{{vm.type}}" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" ng-readonly="{{vm.isReadonly}}"'+
+                        'name="{{vm.controlId}}" ng-required="{{vm.isRequired}}" />' +
                 '</div>',
             controllerAs: 'vm',
             controller: controller,

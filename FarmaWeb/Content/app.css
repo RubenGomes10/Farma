@@ -315,9 +315,6 @@ nav li a {
   width: 50%;
   margin: 15px auto; }
 
-.table td, .table th {
-  text-align: center; }
-
 .title {
   font-family: 'Montserrat', sans-serif; }
 
@@ -328,11 +325,17 @@ nav li a {
 .main-content {
   height: 100%; }
 
+.table td, .table th {
+  text-align: center; }
 .table thead th {
   cursor: pointer; }
-
+.table.table-selectable tbody tr:hover {
+  background-color: #337ab7;
+  color: #fff;
+  cursor: pointer; }
 .table tbody tr:hover {
-  background-color: #fff; }
+  background-color: #337ab7;
+  color: #fff; }
 
 .pagination > li > a, .pagination > li > span {
   float: none !important; }

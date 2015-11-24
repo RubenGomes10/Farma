@@ -25,16 +25,20 @@
             rescDate: ''
         }
         // DROPDOWNS BEGIN
-        vm.clientTypeDropdownSrc = $farmaciasService.getClientType();
-        vm.zoneDropdownSrc = $farmaciasService.getZone();
+        vm.clientTypeDropdown = [];
+        vm.getClientTypeDropdownSrc = function () {
+            vm.clientTypeDropdown = $farmaciasService.getClientType();
+        }
+        vm.zoneDropdown = [];
+        vm.getZoneDropdownSrc = function () {
+            vm.zoneDropdown = $farmaciasService.getZone();
+        }
         //DROPDOWNS END
 
         //Se as funções forem maiores, assignamos a variavel em cima, mas definimos a função em baixo
         vm.toggleSearch = function () {
             vm.searchEnabled = !vm.searchEnabled;
         }
-
-
 
         vm.sendForm = function sendForm() {
             console.log(vm.form);
@@ -51,8 +55,6 @@
         //    return data;
         //});
         // DATEPICKER END
-        
-
 
     }
 })();

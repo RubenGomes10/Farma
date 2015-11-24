@@ -267,10 +267,6 @@ nav {
     margin: 15px auto;
 }
 
-.table td, .table th {
-    text-align: center;
-}
-
 .title {
     font-family: 'Montserrat', sans-serif;
 }
@@ -284,12 +280,26 @@ nav {
     @include full-height;
 }
 
-.table thead th {
-    cursor: pointer;
-}
+.table {
 
-.table tbody tr:hover {
-    background-color: #fff;
+    td, th{
+        text-align: center;
+    }
+
+    thead th {
+        cursor: pointer;
+    }
+
+    &.table-selectable tbody tr:hover {
+        background-color: $primarycolor;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    tbody tr:hover {
+        background-color: $primarycolor;
+        color: #fff;
+    }
 }
 
 .pagination > li > a, .pagination > li > span {

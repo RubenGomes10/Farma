@@ -1,12 +1,12 @@
-﻿﻿(function () {
+﻿(function () {
     'use strict';
 
     angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table', 'ngAnimate'])
     .config(appConfig)
 
     appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-        
-    function appConfig ($stateProvider, $urlRouterProvider) {
+
+    function appConfig($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/farmacias');
         //se tiver aqui os controllers não é preciso por no HTML

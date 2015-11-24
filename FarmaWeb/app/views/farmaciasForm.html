@@ -3,13 +3,13 @@
         <legend>Farmácia</legend>
         <div class="form-group row">
             <custom-dropdown control-id="clientType" label="Tipo de Cliente" model="vm.form.clientType"
-                             src="vm.clientTypeDropdownSrc" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
+                             source="vm.clientTypeDropdown" set-data="vm.getClientTypeDropdownSrc()" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
             <custom-textbox control-id="codeANF" label="Código ANF" model="vm.form.codeANF" type="text"
-                            is-required="false" form="farmaciaForm" css-class="col-md-3"></custom-textbox>
+                            is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="{{vm.isReadonly}}"></custom-textbox>
             <custom-textbox control-id="clientSAP" label="Nº Cliente SAP" model="vm.form.clientSAP" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3"></custom-textbox>
-            <custom-dropdown control-id="zone" label="Zona" model="vm.form.zone"
-                             src="vm.zoneDropdownSrc" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
+            <custom-dropdown control-id="zone" label="Zona" model="vm.form.zone" source="vm.zoneDropdown"
+                             set-data="vm.getZoneDropdownSrc()" is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3"></custom-dropdown>
         </div>
         <div class="form-group row">
             <custom-checkbox control-id="isActive" label="Activo" model="vm.form.isActive" css-class="col-md-3"></custom-checkbox>

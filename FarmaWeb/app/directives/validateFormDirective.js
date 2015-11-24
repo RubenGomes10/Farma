@@ -42,7 +42,7 @@
 
                             setTimeout(function () {
                                 $('[role=alert]', scope.formElement).focus().addClass('alert-temp');
-                            }, 10)
+                            }, 0)
                         }
                     }
                 });
