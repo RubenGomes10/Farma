@@ -8,32 +8,32 @@
 
     function appConfig($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/farmacias');
+        $urlRouterProvider.otherwise('/farmacia');
         //se tiver aqui os controllers não é preciso por no HTML
         //o controller As é para não esquecer para depois se usar o vm dentro do controller
         $stateProvider
-        .state('farmacias', {
-            url: '/farmacias',
-            templateUrl: '/app/views/farmaciasList.html',
-            controller: 'farmaciasController',
+        .state('farmacia', {
+            url: '/farmacia',
+            templateUrl: '/app/views/farmaciaList.html',
+            controller: 'farmaciaListController',
             controllerAs: 'vm'
         })
-        .state('createFarmacias', {
-            url: '/farmaciasForm',
-            templateUrl: '/app/views/farmaciasForm.html',
-            controller: 'farmaciasController',
+        .state('createFarmacia', {
+            url: '/createFarmacia',
+            templateUrl: '/app/views/farmaciaForm.html',
+            controller: 'farmaciaFormController',
             controllerAs: 'vm'
         })
-        .state('distritos', {
-            url: '/distritos',
-            templateUrl: '/app/views/distritosList.html',
-            controller: 'distritosController',
+        .state('distrito', {
+            url: '/distrito',
+            templateUrl: '/app/views/distritoList.html',
+            controller: 'distritoController',
             controllerAs: 'vm'
         })
-        .state('clientes', {
-            url: '/clientes',
-            templateUrl: '/app/views/farmaciasForm.html',
-            controller: 'farmaciasController',
+        .state('cliente', {
+            url: '/cliente',
+            templateUrl: '/app/views/farmaciaForm.html',
+            controller: 'farmaciaFormController',
             controllerAs: 'vm'
         });
     }

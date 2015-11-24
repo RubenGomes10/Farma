@@ -1,18 +1,15 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('farmaciasController', FarmaciasController);
+    angular.module('FarmaciaApp').controller('farmaciaFormController', controller);
 
-    FarmaciasController.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
-    function FarmaciasController($filter, $farmaciasService, dateFilter) {
+    controller.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
+    function controller($filter, $farmaciasService, dateFilter) {
         var vm = this;
-        vm.displayedCollection = [];
-        vm.itemsByPage = 5;
-        vm.rowCollection = $farmaciasService.getAll();
-        vm.searchEnabled = false;
+
         vm.submitted = false;
         vm.submitErrors = true;
-        vm.createFarmaciasLink = 'createFarmacias';
+
         vm.listFarmaciasLink = 'farmacias';
         vm.form = {
             clientType: '',
@@ -34,11 +31,6 @@
             vm.zoneDropdown = $farmaciasService.getZone();
         }
         //DROPDOWNS END
-
-        //Se as funções forem maiores, assignamos a variavel em cima, mas definimos a função em baixo
-        vm.toggleSearch = function () {
-            vm.searchEnabled = !vm.searchEnabled;
-        }
 
         vm.sendForm = function sendForm() {
             console.log(vm.form);

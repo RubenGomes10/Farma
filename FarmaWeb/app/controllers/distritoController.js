@@ -1,10 +1,10 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('distritosController', DistritosController);
+    angular.module('FarmaciaApp').controller('distritoController', controller);
 
-    DistritosController.$inject = ['$filter'];
-    function DistritosController($filter) {
+    controller.$inject = ['$filter'];
+    function controller($filter) {
         var vm = this;
         vm.displayedCollection = [];
 

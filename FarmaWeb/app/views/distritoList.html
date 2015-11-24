@@ -1,5 +1,5 @@
 ﻿<table-headers></table-headers>
-<table st-table="farmacias" class="table table-striped">
+<table st-table="vm.rowCollection" class="table table-striped">
     <thead>
         <tr>
             <th colspan="1" ng-show="vm.searchEnabled">
@@ -7,12 +7,12 @@
             </th>
         </tr>
         <tr>
-            <th st-sort="lastName">Distrito</th>
+            <th st-sort="Distrito">Distrito</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="row in vm.rowCollection">
-            <td>{{row.Nome}}</td>
+            <td>{{row.Distrito}}</td>
         </tr>
     </tbody>
     <tfoot>

@@ -74,8 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\distritosController.js" />
-    <Content Include="app\controllers\farmaciasController.js" />
+    <Content Include="app\controllers\distritoController.js" />
+    <Content Include="app\controllers\farmaciaListController.js" />
+    <Content Include="app\controllers\farmaciaFormController.js" />
     <Content Include="app\controllers\menuController.js" />
     <Content Include="app\directives\animationDirective.js" />
     <Content Include="app\directives\dateFormatDirective.js" />
@@ -85,11 +86,9 @@
     <Content Include="app\directives\textboxDirective.js" />
     <Content Include="app\directives\validateFormDirective.js" />
     <Content Include="app\services\farmaciasService.js" />
-    <Content Include="app\views\distritosList.html" />
-    <Content Include="app\views\farmaciaMainView.html" />
-    <Content Include="app\views\farmaciasForm.html" />
-    <Content Include="app\views\farmaciasList.html" />
-    <Content Include="app\views\maincontent.html" />
+    <Content Include="app\views\distritoList.html" />
+    <Content Include="app\views\farmaciaForm.html" />
+    <Content Include="app\views\farmaciaList.html" />
     <Content Include="app\views\_tableHeaders.html" />
     <Content Include="Content\app.css">
       <DependentUpon>app.scss</DependentUpon>
@@ -104,27 +103,6 @@
     <Content Include="Index.html" />
     <Content Include="Scripts\angular-ui\angular-animate.js" />
     <Content Include="Scripts\angular-ui\angular-animate.min.js" />
-    <Content Include="Scripts\angular-aria.js" />
-    <Content Include="Scripts\angular-aria.min.js" />
-    <Content Include="Scripts\angular-cookies.js" />
-    <Content Include="Scripts\angular-cookies.min.js" />
-    <Content Include="Scripts\angular-csp.css" />
-    <Content Include="Scripts\angular-loader.js" />
-    <Content Include="Scripts\angular-loader.min.js" />
-    <Content Include="Scripts\angular-message-format.js" />
-    <Content Include="Scripts\angular-message-format.min.js" />
-    <Content Include="Scripts\angular-messages.js" />
-    <Content Include="Scripts\angular-messages.min.js" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular-resource.min.js" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\angular-sanitize.js" />
-    <Content Include="Scripts\angular-sanitize.min.js" />
-    <Content Include="Scripts\angular-scenario.js" />
-    <Content Include="Scripts\angular-touch.js" />
-    <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular-ui\angular-locale_pt-pt.js" />
     <Content Include="Scripts\angular-ui\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui\angular-ui-router.min.js" />
@@ -132,10 +110,8 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -896,13 +872,14 @@
     </Content>
     <Content Include="Content\_setup.scss" />
     <Content Include="Content\_reset.scss" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\smart-table.js" />
-    <Content Include="Scripts\smart-table.min.js" />
+    <Content Include="Scripts\angular\angular.min.js.map" />
+    <None Include="Scripts\jquery\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\plugins\smart-table.js" />
+    <Content Include="Scripts\plugins\smart-table.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -913,19 +890,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular-touch.min.js.map" />
-    <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
-    <Content Include="Scripts\angular-resource.min.js.map" />
-    <Content Include="Scripts\angular-messages.min.js.map" />
-    <Content Include="Scripts\angular-message-format.min.js.map" />
-    <Content Include="Scripts\angular-loader.min.js.map" />
-    <Content Include="Scripts\angular-cookies.min.js.map" />
-    <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-ui\angular-animate.min.js.map" />
-    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
