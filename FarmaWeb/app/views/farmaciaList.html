@@ -15,7 +15,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="row in vm.rowCollection">
-            <td ui-sref="createFarmacia">{{row.Nome}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
+            <td ui-sref="detailFarmacia({id:row.Id})">{{row.Nome}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
             <td>{{row.Distrito | uppercase}}</td>
         </tr>
     </tbody>

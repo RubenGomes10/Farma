@@ -87,6 +87,7 @@
     <Content Include="app\directives\validateFormDirective.js" />
     <Content Include="app\services\farmaciasService.js" />
     <Content Include="app\views\distritoList.html" />
+    <Content Include="app\views\farmaciaDetail.html" />
     <Content Include="app\views\farmaciaForm.html" />
     <Content Include="app\views\farmaciaList.html" />
     <Content Include="app\views\_tableHeaders.html" />

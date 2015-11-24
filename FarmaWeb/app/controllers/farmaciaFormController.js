@@ -6,11 +6,11 @@
     controller.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
     function controller($filter, $farmaciasService, dateFilter) {
         var vm = this;
-
+        vm.readonly = false;
         vm.submitted = false;
         vm.submitErrors = true;
 
-        vm.listFarmaciasLink = 'farmacias';
+        vm.listFarmaciasLink = 'farmacia';
         vm.form = {
             clientType: '',
             codeANF: '',

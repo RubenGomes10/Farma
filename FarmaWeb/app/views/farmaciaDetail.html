@@ -1,4 +1,4 @@
-﻿<form ng-init="vm.readonly = false" name="farmaciaForm" validate-form-directive callback="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
+﻿<form ng-init="vm.readonly = true" name="farmaciaForm" validate-form-directive callback="vm.sendForm()" submit-errors="vm.submitErrors" novalidate>
     <fieldset>
         <legend>Farmácia</legend>
         <div class="form-group row">
@@ -26,12 +26,9 @@
                                min="vm.minDate" max="vm.maxDate" is-required="true" css-class="col-md-3"
                                form="farmaciaForm" is-readonly="vm.readonly"></custom-datepicker>
         </div>
-        <div class="form-group row submit-buttons" ng-hide="{{vm.readonly}}">
-            <div class="col-md-1 col-md-offset-4">
+        <div class="form-group row submit-buttons">
+            <div class="col-md-1 col-md-offset-5">
                 <input type="button" ui-sref="{{vm.listFarmaciasLink}}" class="form-control btn-danger btn-sm btn btn-primary" value="Voltar" />
-            </div>
-            <div class="col-md-1 col-md-offset-1">
-                <input type="submit" ng-click="vm.submitted = true" class="form-control btn-sm btn btn-primary" value="Guardar" />
             </div>
         </div>
     </fieldset>

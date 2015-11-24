@@ -24,6 +24,12 @@
             controller: 'farmaciaFormController',
             controllerAs: 'vm'
         })
+        .state('detailFarmacia', {
+            url: '/detailFarmacia/:id',
+            templateUrl: '/app/views/farmaciaDetail.html',
+            controller: 'farmaciaFormController',
+            controllerAs: 'vm'
+        })
         .state('distrito', {
             url: '/distrito',
             templateUrl: '/app/views/distritoList.html',

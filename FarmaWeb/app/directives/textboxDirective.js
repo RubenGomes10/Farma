@@ -16,7 +16,7 @@
                 type: '@',
                 isRequired: '@',
                 cssClass: '@',
-                isReadonly: '@',
+                isReadonly: '=',
                 form: '='
             },
             /*O ng-model serve para actualizar directamente o valor no controller quando há alterações em inputs;

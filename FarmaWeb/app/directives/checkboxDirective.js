@@ -16,7 +16,8 @@
                 type: '@',
                 isRequired: '@',
                 cssClass: '@',
-                form: '='
+                form: '=',
+                isReadonly: '='
             },
             /*O ng-model serve para actualizar directamente o valor no controller quando há alterações em inputs;
             * Para as validações tem que se ter o name = id;
@@ -28,7 +29,7 @@
             template:
                 '<div class="{{vm.cssClass}} checkbox" >' +
                     '<label>' +
-                        '<input type="checkbox" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" name="{{vm.controlId}}" />{{vm.label}}'+
+                        '<input type="checkbox" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" name="{{vm.controlId}}" ng-disabled="{{vm.isReadonly}}"/>{{vm.label}}' +
                     '</label>' +
                 '</div>',
             controllerAs: 'vm',

@@ -9,6 +9,8 @@ html {
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
+    @include full-height;
+    overflow: auto;
 }
 
 body {
@@ -18,6 +20,8 @@ body {
     font-family: $basefont;
     margin: 0;
     padding: 0;
+    @include full-height;
+    overflow: auto;
 }
 
 a {
@@ -183,29 +187,6 @@ input[type="checkbox"] {
     width: auto;
 }
 
-/*input[type="submit"],
-    input[type="button"],
-    button {
-        background-color: #d3dce0;
-        border: 1px solid #787878;
-        cursor: pointer;
-        font-size: 1.2em;
-        font-weight: 600;
-        padding: 7px;
-        margin-right: 8px;
-        width: auto;
-    }
-
-    td input[type="submit"],
-    td input[type="button"],
-    td button {
-        font-size: 1em;
-        padding: 4px;
-        margin-right: 4px;
-    }*/
-
-
-
 header {
     height: 15%;
     width: 100%;
@@ -223,11 +204,11 @@ nav {
 }
 
 .full-width {
-    width: 100% !important;
+    @include full-width;
 }
 
 .full-height {
-    height: 100% !important;
+    @include full-height;
 }
 
 #pageLoader {
@@ -357,8 +338,6 @@ nav {
     }
 }
 
-
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -369,6 +348,10 @@ input::-webkit-inner-spin-button {
 .page-items {
     width: 38px;
     margin-top: 2px;
+}
+
+.pagination li{
+    cursor: pointer;
 }
 
 .checkbox label {
@@ -419,3 +402,4 @@ input::-webkit-inner-spin-button {
         max-height: 0px;
     }
 }
+

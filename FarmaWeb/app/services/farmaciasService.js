@@ -7,9 +7,9 @@
     function FarmaciasService($http) {
         var vm = this;
         var farmaciasAPI = {
-            getAll : getAllFarmacias,
+            getAll: getAllFarmacias,
             getClientType: getClientType,
-            getZone : getZone
+            getZone: getZone
         };
 
 
@@ -18,17 +18,25 @@
             //return $http.get('api/Farmacias/GetAll');
             var list = [];
             list =
-                [{ Nome: "Cais do Sodre", Distrito: "Lisboa" },
-                { Nome: "Feira", Distrito: "Aveiro" },
-                { Nome: "Porto", Distrito: "Porto" },
-                { Nome: "Feira", Distrito: "Aveiro" },
-                { Nome: "Aveiro", Distrito: "Aveiro" },
-                { Nome: "Ourem", Distrito: "Leiria" },
-                { Nome: "Espinho", Distrito: "Aveiro" },
-                { Nome: "Coimbra", Distrito: "Coimbra" },
-                { Nome: "Olhao", Distrito: "Algarve" },
-                { Nome: "Expo", Distrito: "Lisboa" },
-                { Nome: "Beja", Distrito: "Beja" }];
+                [
+                    { Id: 1, Nome: "Cais do Sodre", Distrito: "Lisboa" },
+                    { Id: 2, Nome: "Feira", Distrito: "Aveiro" },
+                    { Id: 3, Nome: "Porto", Distrito: "Porto" },
+                    { Id: 4, Nome: "Feira", Distrito: "Aveiro" },
+                    { Id: 5, Nome: "Aveiro", Distrito: "Aveiro" },
+                    { Id: 6, Nome: "Ourem", Distrito: "Leiria" },
+                    { Id: 7, Nome: "Espinho", Distrito: "Aveiro" },
+                    { Id: 8, Nome: "Coimbra", Distrito: "Coimbra" },
+                    { Id: 9, Nome: "Olhao", Distrito: "Algarve" },
+                    { Id: 10, Nome: "Expo", Distrito: "Lisboa" },
+                    { Id: 11, Nome: "Beja", Distrito: "Beja" },
+                    { Id: 12, Nome: "Ourem", Distrito: "Leiria" },
+                    { Id: 13, Nome: "Espinho", Distrito: "Aveiro" },
+                    { Id: 14, Nome: "Coimbra", Distrito: "Coimbra" },
+                    { Id: 15, Nome: "Olhao", Distrito: "Algarve" },
+                    { Id: 16, Nome: "Expo", Distrito: "Lisboa" },
+                    { Id: 17, Nome: "Beja", Distrito: "Beja" }
+                ];
 
             return list;
         }
