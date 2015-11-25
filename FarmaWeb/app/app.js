@@ -20,14 +20,14 @@
         })
         .state('createFarmacia', {
             url: '/createFarmacia',
-            templateUrl: '/app/views/farmaciaForm.html',
-            controller: 'farmaciaFormController',
+            templateUrl: '/app/views/farmaciaCreate.html',
+            controller: 'farmaciaCreateController',
             controllerAs: 'vm'
         })
         .state('detailFarmacia', {
             url: '/detailFarmacia/:id',
             templateUrl: '/app/views/farmaciaDetail.html',
-            controller: 'farmaciaFormController',
+            controller: 'farmaciaDetailController',
             controllerAs: 'vm'
         })
         .state('distrito', {
@@ -38,8 +38,8 @@
         })
         .state('cliente', {
             url: '/cliente',
-            templateUrl: '/app/views/farmaciaForm.html',
-            controller: 'farmaciaFormController',
+            templateUrl: '/app/views/farmaciaCreate.html',
+            controller: 'farmaciaCreateController',
             controllerAs: 'vm'
         });
     }

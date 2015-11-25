@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
     @include full-height;
-    overflow: auto;
+    overflow: hidden;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     @include full-height;
-    overflow: auto;
+    overflow: hidden;
 }
 
 a {
@@ -253,12 +253,12 @@ nav {
 }
 
 .row-main-content {
-    height: 85%;
     @include full-width;
 }
 
 .main-content {
-    @include full-height;
+    height: 85%;
+    overflow-y: scroll;
 }
 
 .table {

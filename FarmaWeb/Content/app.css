@@ -111,7 +111,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: auto; }
+  overflow: hidden; }
 
 body {
   background-color: #fff;
@@ -121,7 +121,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: auto; }
+  overflow: hidden; }
 
 a {
   color: #333;
@@ -303,11 +303,11 @@ nav li a {
   font-family: 'Montserrat', sans-serif; }
 
 .row-main-content {
-  height: 85%;
   width: 100%; }
 
 .main-content {
-  height: 100%; }
+  height: 85%;
+  overflow-y: scroll; }
 
 .table td, .table th {
   text-align: center; }

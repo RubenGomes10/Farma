@@ -39,6 +39,7 @@
                             $('[role=alert]', scope.formElement).remove();
                             scope.formElement.prepend(alert);
                             $compile(alert)(scope);
+                            $("section").animate({ scrollTop: 0 }, 100)
 
                             setTimeout(function () {
                                 $('[role=alert]', scope.formElement).focus().addClass('alert-temp');

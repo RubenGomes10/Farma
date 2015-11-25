@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('farmaciaFormController', controller);
+    angular.module('FarmaciaApp').controller('farmaciaCreateController', controller);
 
     controller.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
     function controller($filter, $farmaciasService, dateFilter) {
@@ -19,7 +19,20 @@
             zone: '',
             isActive: false,
             initialDate: '',
-            rescDate: ''
+            rescDate: '',
+            name: '',
+            owner: '',
+            address: '',
+            NIF: '',
+            locale: '',
+            techDirector: '',
+            phone: '',
+            localCode: '',
+            fax: '',
+            district: '',
+            email: '',
+            county: '',
+            agent: ''
         }
         // DROPDOWNS BEGIN
         vm.clientTypeDropdown = [];
