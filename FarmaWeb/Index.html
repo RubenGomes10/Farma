@@ -19,7 +19,7 @@
     </header>
 
     <main class="row row-main-content no-margin">
-        <nav class="col-md-2 no-padding" ng-controller="menuController as menus">
+        <nav class="col-md-2 col-xs-12 col-sm-12 no-padding" ng-controller="menuController as menus">
             <ul id="menu" class="nav nav-pills nav-stacked">
                 <li ng-class="menus.tabClass(tab.Nome)" ng-repeat="tab in menus.rowCollection"
                     ng-init="menus.setSelectedTab(menus.getActiveTab())" ng-click="menus.setSelectedTab(tab.Nome)">
@@ -27,7 +27,7 @@
                 </li>
             </ul>
         </nav>
-        <section class="content-wrapper main-content clear-fix col-md-10">
+        <section class="content-wrapper main-content clear-fix col-md-10 col-xs-12 col-sm-12">
             <div ui-view></div>
         </section>
     </main>

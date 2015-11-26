@@ -1,0 +1,27 @@
+@media only screen and (max-width : 480px) {
+
+    .main-content{
+        height: 70%;
+    }
+
+    nav {
+        height: 30%;
+        li a {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    .main-content{
+        height: 70%;
+    }
+
+    nav {
+        height: 30%;
+        li a {
+            text-align: center;
+        }
+    }
+}

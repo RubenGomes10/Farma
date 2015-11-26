@@ -876,6 +876,7 @@
     <Content Include="Content\_setup.scss" />
     <Content Include="Content\_reset.scss" />
     <Content Include="Scripts\angular\angular.min.js.map" />
+    <Content Include="Content\_small-screen.scss" />
     <None Include="Scripts\jquery\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery\jquery-1.9.1.min.js" />

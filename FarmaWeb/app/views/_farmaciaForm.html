@@ -68,11 +68,11 @@
             <custom-textbox control-id="agent" label="Agente" model="vm.form.agent" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
-        <div class="form-group row submit-buttons" ng-hide="{{vm.readonly}}">
+        <div class="form-group row submit-buttons">
             <div class="col-md-1 col-md-offset-4">
                 <input type="button" ui-sref="{{vm.listFarmaciasLink}}" class="form-control btn-danger btn-sm btn btn-primary" value="Voltar" />
             </div>
-            <div class="col-md-1 col-md-offset-1">
+            <div class="col-md-1 col-md-offset-1" ng-hide="{{vm.readonly}}">
                 <input type="submit" ng-click="vm.submitted = true" class="form-control btn-sm btn btn-primary" value="Guardar" />
             </div>
         </div>

@@ -254,6 +254,7 @@ nav {
 
 .row-main-content {
     @include full-width;
+    height: 85%;
 }
 
 .main-content {
@@ -403,3 +404,4 @@ input::-webkit-inner-spin-button {
     }
 }
 
+@import "small-screen";
