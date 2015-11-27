@@ -11,7 +11,7 @@
         vm.submitErrors = true;
 
         vm.listFarmaciasLink = 'farmacia';
-        vm.form = {
+        vm.model = {
             clientType: '',
             codeANF: '',
             clientSAP: '',

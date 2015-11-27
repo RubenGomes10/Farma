@@ -9,14 +9,14 @@
             </th>
         </tr>
         <tr>
-            <th st-sort="Nome" st-skip-natural="true">Farmácia</th>
-            <th st-sort="Distrito" st-skip-natural="true">Distrito</th>
+            <th st-sort="name" st-skip-natural="true">Farmácia</th>
+            <th st-sort="district" st-skip-natural="true">Distrito</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="row in vm.rowCollection">
-            <td ui-sref="detailFarmacia({id:row.Id})">{{row.Nome}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
-            <td>{{row.Distrito | uppercase}}</td>
+            <td ui-sref="detailFarmacia({id:row.Id})">{{row.name}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
+            <td>{{row.district | uppercase}}</td>
         </tr>
     </tbody>
     <tfoot>

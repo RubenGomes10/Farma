@@ -2,79 +2,80 @@
     <fieldset>
         <legend>Farmácia</legend>
         <div class="form-group row">
-            <custom-dropdown control-id="clientType" label="Tipo de Cliente" model="vm.form.clientType"
+            <custom-dropdown control-id="clientType" label="Tipo de Cliente" model="vm.model.clientType"
                              source="vm.clientTypeDropdown" set-data="vm.getClientTypeDropdownSrc()"
                              is-required="true" form="farmaciaForm" css-class="custom-dropdown col-md-3" is-readonly="vm.readonly"></custom-dropdown>
-            <custom-textbox control-id="codeANF" label="Código ANF" model="vm.form.codeANF" type="text"
+            <custom-textbox control-id="codeANF" label="Código ANF" model="vm.model.codeANF" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="clientSAP" label="Nº Cliente SAP" model="vm.form.clientSAP" type="text"
+            <custom-textbox control-id="clientSAP" label="Nº Cliente SAP" model="vm.model.clientSAP" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-dropdown control-id="zone" label="Zona" model="vm.form.zone" source="vm.zoneDropdown"
+            <custom-dropdown control-id="zone" label="Zona" model="vm.model.zone" source="vm.zoneDropdown"
                              set-data="vm.getZoneDropdownSrc()" is-required="true" form="farmaciaForm"
                              css-class="custom-dropdown col-md-3" is-readonly="vm.readonly"></custom-dropdown>
         </div>
         <div class="form-group row">
-            <custom-checkbox control-id="isActive" label="Activo" model="vm.form.isActive" css-class="col-md-3"
+            <custom-checkbox control-id="isActive" label="Activo" model="vm.model.isActive" css-class="col-md-3"
                              is-readonly="vm.readonly"></custom-checkbox>
-            <custom-textbox control-id="initialReq" label="Nº Req Inicial" model="vm.form.initialReq" type="number"
+            <custom-textbox control-id="initialReq" label="Nº Req Inicial" model="vm.model.initialReq" type="number"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
 
-            <custom-datepicker control-id="initialDate" label="Data Início Contrato" model="vm.form.initialDate"
+            <custom-datepicker control-id="initialDate" label="Data Início Contrato" model="vm.model.initialDate"
                                min="vm.minDate" max="vm.maxDate" is-required="false" css-class="col-md-3"
                                form="farmaciaForm" is-readonly="vm.readonly"></custom-datepicker>
-            <custom-datepicker control-id="rescDate" label="Data Rescisão" model="vm.form.rescDate"
+            <custom-datepicker control-id="rescDate" label="Data Rescisão" model="vm.model.rescDate"
                                min="vm.minDate" max="vm.maxDate" is-required="false" css-class="col-md-3"
                                form="farmaciaForm" is-readonly="vm.readonly"></custom-datepicker>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="name" label="Nome" model="vm.form.name" type="text"
+            <custom-textbox control-id="name" label="Nome" model="vm.model.name" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="owner" label="Proprietário / Facturação" model="vm.form.owner" type="text"
+            <custom-textbox control-id="owner" label="Proprietário / Facturação" model="vm.model.owner" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="address" label="Morada" model="vm.form.address" type="text"
+            <custom-textbox control-id="address" label="Morada" model="vm.model.address" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="NIF" label="NIF" model="vm.form.NIF" type="number"
+            <custom-textbox control-id="NIF" label="NIF" model="vm.model.NIF" type="number"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="locale" label="Localidade" model="vm.form.locale" type="text"
+            <custom-textbox control-id="locale" label="Localidade" model="vm.model.locale" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="techDirector" label="Dir. Técnico" model="vm.form.techDirector" type="text"
+            <custom-textbox control-id="techDirector" label="Dir. Técnico" model="vm.model.techDirector" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="zipCode" label="Código Postal" model="vm.form.zipCode" type="text"
+            <custom-textbox control-id="zipCode" label="Código Postal" model="vm.model.zipCode" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="phone" label="Telefone" model="vm.form.phone" type="number"
+            <custom-textbox control-id="phone" label="Telefone" model="vm.model.phone" type="number"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly" max-length="9"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="localCode" label="Localidade Postal" model="vm.form.localCode" type="text"
+            <custom-textbox control-id="localCode" label="Localidade Postal" model="vm.model.localCode" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="fax" label="Fax" model="vm.form.fax" type="number"
+            <custom-textbox control-id="fax" label="Fax" model="vm.model.fax" type="number"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="district" label="Distrito" model="vm.form.district" type="text"
+            <custom-textbox control-id="district" label="Distrito" model="vm.model.district" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="email" label="Email" model="vm.form.email" type="text"
+            <custom-textbox control-id="email" label="Email" model="vm.model.email" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
-            <custom-textbox control-id="county" label="Concelho" model="vm.form.county" type="text"
+            <custom-textbox control-id="county" label="Concelho" model="vm.model.county" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="agent" label="Agente" model="vm.form.agent" type="text"
+            <custom-textbox control-id="agent" label="Agente" model="vm.model.agent" type="text"
                             is-required="true" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row submit-buttons">
-            <div class="col-md-1 col-md-offset-4">
+            <div ng-class="(vm.readonly==true) ? 'col-md-1 col-md-offset-5' : 'col-md-1 col-md-offset-4'">
                 <input type="button" ui-sref="{{vm.listFarmaciasLink}}" class="form-control btn-danger btn-sm btn btn-primary" value="Voltar" />
             </div>
             <div class="col-md-1 col-md-offset-1" ng-hide="{{vm.readonly}}">
                 <input type="submit" ng-click="vm.submitted = true" class="form-control btn-sm btn btn-primary" value="Guardar" />
             </div>
         </div>
+        <!-- Estas condições do read-only estavam aqui porque ao inicio tinha a mesma pagina para o form e para o detail -->
     </fieldset>
 </form>

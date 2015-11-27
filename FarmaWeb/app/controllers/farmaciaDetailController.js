@@ -3,37 +3,26 @@
 
     angular.module('FarmaciaApp').controller('farmaciaDetailController', controller);
 
-    controller.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
-    function controller($filter, $farmaciasService, dateFilter) {
+    controller.$inject = ['$filter','$stateParams', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
+    function controller($filter, $stateParams, $farmaciasService, dateFilter) {
         var vm = this;
         vm.readonly = true;
-        vm.submitted = false;
-        vm.submitErrors = true;
 
+        vm.model = $farmaciasService.getFarmaciaById($stateParams.id);
+        console.log(vm.model);
         vm.listFarmaciasLink = 'farmacia';
-        vm.form = {
-            clientType: '',
-            codeANF: '',
-            clientSAP: '',
-            initialReq: '',
-            zone: '',
-            isActive: false,
-            initialDate: '',
-            rescDate: ''
-        }
+
         // DROPDOWNS BEGIN
-        vm.clientTypeDropdown = [];
         vm.getClientTypeDropdownSrc = function () {
             vm.clientTypeDropdown = $farmaciasService.getClientType();
         }
-        vm.zoneDropdown = [];
         vm.getZoneDropdownSrc = function () {
             vm.zoneDropdown = $farmaciasService.getZone();
         }
         //DROPDOWNS END
 
         vm.sendForm = function sendForm() {
-            console.log(vm.form);
+            console.log(vm.model);
         }
 
         // DATEPICKER BEGIN

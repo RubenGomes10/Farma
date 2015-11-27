@@ -3,13 +3,14 @@
 
     angular.module('FarmaciaApp').factory('farmaciasService', FarmaciasService);
 
-    FarmaciasService.$inject = ['$http'];
-    function FarmaciasService($http) {
+    FarmaciasService.$inject = ['$http', '$filter'];
+    function FarmaciasService($http, $filter) {
         var vm = this;
         var farmaciasAPI = {
             getAll: getAllFarmacias,
             getClientType: getClientType,
-            getZone: getZone
+            getZone: getZone,
+            getFarmaciaById: getFarmaciaById
         };
 
 
@@ -19,23 +20,23 @@
             var list = [];
             list =
                 [
-                    { Id: 1, Nome: "Cais do Sodre", Distrito: "Lisboa" },
-                    { Id: 2, Nome: "Feira", Distrito: "Aveiro" },
-                    { Id: 3, Nome: "Porto", Distrito: "Porto" },
-                    { Id: 4, Nome: "Feira", Distrito: "Aveiro" },
-                    { Id: 5, Nome: "Aveiro", Distrito: "Aveiro" },
-                    { Id: 6, Nome: "Ourem", Distrito: "Leiria" },
-                    { Id: 7, Nome: "Espinho", Distrito: "Aveiro" },
-                    { Id: 8, Nome: "Coimbra", Distrito: "Coimbra" },
-                    { Id: 9, Nome: "Olhao", Distrito: "Algarve" },
-                    { Id: 10, Nome: "Expo", Distrito: "Lisboa" },
-                    { Id: 11, Nome: "Beja", Distrito: "Beja" },
-                    { Id: 12, Nome: "Ourem", Distrito: "Leiria" },
-                    { Id: 13, Nome: "Espinho", Distrito: "Aveiro" },
-                    { Id: 14, Nome: "Coimbra", Distrito: "Coimbra" },
-                    { Id: 15, Nome: "Olhao", Distrito: "Algarve" },
-                    { Id: 16, Nome: "Expo", Distrito: "Lisboa" },
-                    { Id: 17, Nome: "Beja", Distrito: "Beja" }
+                    { Id: 1, name: "Cais do Sodre", district: "Lisboa", clientType: "Barraca", initialDate: "21/03/2014" },
+                    { Id: 2, name: "Feira", district: "Aveiro", clientType: "Banca" },
+                    { Id: 3, name: "Porto", district: "Porto", clientType: "Banca" },
+                    { Id: 4, name: "Feira", district: "Aveiro", clientType: "Saúde" },
+                    { Id: 5, name: "Aveiro", district: "Aveiro", clientType: "Banca" },
+                    { Id: 6, name: "Ourem", district: "Leiria", clientType: "Banca" },
+                    { Id: 7, name: "Espinho", district: "Aveiro", clientType: "Saúde" },
+                    { Id: 8, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
+                    { Id: 9, name: "Olhao", district: "Algarve", clientType: "Banca" },
+                    { Id: 10, name: "Expo", district: "Lisboa", clientType: "Saúde" },
+                    { Id: 11, name: "Beja", district: "Beja", clientType: "Banca" },
+                    { Id: 12, name: "Ourem", district: "Leiria", clientType: "Banca" },
+                    { Id: 13, name: "Espinho", district: "Aveiro", clientType: "Saúde" },
+                    { Id: 14, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
+                    { Id: 15, name: "Olhao", district: "Algarve", clientType: "Banca" },
+                    { Id: 16, name: "Expo", district: "Lisboa", clientType: "Banca" },
+                    { Id: 17, name: "Beja", district: "Beja" }
                 ];
 
             return list;
@@ -47,7 +48,7 @@
                     {
                         id: 1,
                         text: 'Banca'
-                    },
+                   , clientType: "Banca" },
                     {
                         id: 2,
                         text: 'Saude'
@@ -62,21 +63,45 @@
                     {
                         id: 1,
                         text: 'Continente'
-                    },
+                   , clientType: "Banca" },
                     {
                         id: 2,
                         text: 'Ilhas'
-                    },
+                   , clientType: "Banca" },
                     {
                         id: 3,
                         text: 'PALOP'
-                    },
+                   , clientType: "Banca" },
                     {
                         id: 4,
                         text: 'Internacional'
                     }
                 ]
             return list;
+        }
+
+        function getFarmaciaById(id) {
+            var list =
+                [
+                    { Id: 1, name: "Cais do Sodre", district: "Lisboa", clientType: "Barraca", initialDate: "21/03/2014", isActive: true },
+                    { Id: 2, name: "Feira", district: "Aveiro", clientType: "Banca" },
+                    { Id: 3, name: "Porto", district: "Porto", clientType: "Banca" },
+                    { Id: 4, name: "Feira", district: "Aveiro", clientType: "Banca" },
+                    { Id: 5, name: "Aveiro", district: "Aveiro", clientType: "Banca" },
+                    { Id: 6, name: "Ourem", district: "Leiria", clientType: "Banca" },
+                    { Id: 7, name: "Espinho", district: "Aveiro", clientType: "Banca" },
+                    { Id: 8, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
+                    { Id: 9, name: "Olhao", district: "Algarve", clientType: "Banca" },
+                    { Id: 10, name: "Expo", district: "Lisboa", clientType: "Banca" },
+                    { Id: 11, name: "Beja", district: "Beja", clientType: "Banca" },
+                    { Id: 12, name: "Ourem", district: "Leiria", clientType: "Banca" },
+                    { Id: 13, name: "Espinho", district: "Aveiro", clientType: "Banca" },
+                    { Id: 14, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
+                    { Id: 15, name: "Olhao", district: "Algarve", clientType: "Banca" },
+                    { Id: 16, name: "Expo", district: "Lisboa", clientType: "Banca" },
+                    { Id: 17, name: "Beja", district: "Beja" }
+                ];
+            return $filter('filter')(list, { Id: id })[0];
         }
 
         return farmaciasAPI;

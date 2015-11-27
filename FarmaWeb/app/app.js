@@ -33,7 +33,7 @@
         .state('distrito', {
             url: '/distrito',
             templateUrl: '/app/views/distritoList.html',
-            controller: 'distritoController',
+            controller: 'districtController',
             controllerAs: 'vm'
         })
         .state('cliente', {
