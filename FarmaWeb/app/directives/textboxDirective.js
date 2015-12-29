@@ -22,6 +22,7 @@
                     e.preventDefault();
                     return false;
                 }
+                var inputText = this.value;
             });
         }
     }

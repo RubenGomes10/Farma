@@ -23,6 +23,7 @@
 
         vm.sendForm = function sendForm() {
             console.log(vm.model);
+            $farmaciasService.createFarmacia(vm.model);
         }
 
         // DATEPICKER BEGIN
