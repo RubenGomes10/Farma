@@ -1,5 +1,5 @@
 ﻿<div ng-include="'app/views/_tableHeaders.html'"></div>
-<table st-table="vm.rowCollection" class="table table-striped table-selectable">
+<table st-table="vm.rowCollection" st-pipe="vm.getFarmacias" class="table table-striped table-selectable">
     <thead>
         <tr>
             <th colspan="2" >
@@ -9,14 +9,14 @@
             </th>
         </tr>
         <tr>
-            <th st-sort="name" st-skip-natural="true">Farmácia</th>
-            <th st-sort="district" st-skip-natural="true">Distrito</th>
+            <th st-sort="Nome" st-skip-natural="true">Farmácia</th>
+            <th st-sort="Distrito.Nome" st-skip-natural="true">Distrito</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="row in vm.rowCollection">
-            <td ui-sref="detailFarmacia({id:row.Id})">{{row.name}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
-            <td>{{row.district | uppercase}}</td>
+            <td ui-sref="detailFarmacia({id:row.ID})">{{row.Nome}}</td><!--Por aqui o ID para ir em contexto viewFarmacia({id:vm.id}) em que viewFarmacia é o nome do state -->
+            <td>{{row.NomeDistrito | uppercase}}</td>
         </tr>
     </tbody>
     <tfoot>

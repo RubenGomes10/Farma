@@ -3,6 +3,7 @@
 
     angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table', 'ngAnimate'])
     .config(appConfig)
+    .run(rootScope);
 
     appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -42,6 +43,10 @@
             controller: 'farmaciaCreateController',
             controllerAs: 'vm'
         });
+    }
+
+    function rootScope($rootScope) {
+        $rootScope.baseURL = 'http://localhost:30974/api';
     }
 
 })();

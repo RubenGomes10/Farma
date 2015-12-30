@@ -22,3 +22,15 @@ E:\Repositorios\Farma\FarmaDAL\bin\Debug\EntityFramework.SqlServer.xml
 E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.csprojResolveAssemblyReference.cache
 E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.dll
 E:\Repositorios\Farma\FarmaDAL\obj\Debug\FarmaDAL.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\FarmaDAL.dll.config
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\FarmaDAL.dll
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\FarmaDAL.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\EntityFramework.dll
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\FarmaModel.dll
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\FarmaModel.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\EntityFramework.xml
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\obj\Debug\FarmaDAL.csprojResolveAssemblyReference.cache
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\obj\Debug\FarmaDAL.dll
+C:\Users\userr\Documents\FarmaProject\FarmaDAL\obj\Debug\FarmaDAL.pdb

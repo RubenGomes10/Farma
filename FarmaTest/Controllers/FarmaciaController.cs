@@ -21,8 +21,8 @@ namespace FarmaTest.Controllers
         public ActionResult Index()
         {
             //IEnumerable<Farmacia> listaFarmacias = _repository.FarmaciaRepository.GetAll().ToList();
-            IEnumerable<FarmaciaList> listaFarmacias = _repository.FarmaciaRepository.GetAll().
-                Select(x => new FarmaciaList { 
+            IEnumerable<FarmaciaViewModel> listaFarmacias = _repository.FarmaciaRepository.GetAll().
+                Select(x => new FarmaciaViewModel { 
                     ID = x.FarmaciaID,
                     Nome = x.Nome, 
                     NomeDistrito = x.Distrito.Nome 

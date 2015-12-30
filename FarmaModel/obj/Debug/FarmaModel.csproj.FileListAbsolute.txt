@@ -17,3 +17,12 @@ E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.xml
 E:\Repositorios\Farma\FarmaModel\bin\Debug\EntityFramework.SqlServer.xml
 E:\Repositorios\Farma\FarmaModel\obj\Debug\FarmaModel.dll
 E:\Repositorios\Farma\FarmaModel\obj\Debug\FarmaModel.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\FarmaModel.dll.config
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\FarmaModel.dll
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\FarmaModel.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.dll
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.xml
+C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\userr\Documents\FarmaProject\FarmaModel\obj\Debug\FarmaModel.dll
+C:\Users\userr\Documents\FarmaProject\FarmaModel\obj\Debug\FarmaModel.pdb
