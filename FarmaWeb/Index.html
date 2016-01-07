@@ -22,16 +22,9 @@
     </header>
 
     <main class="row row-main-content no-margin">
-        <nav class="col-md-2 col-xs-12 col-sm-12 no-padding" ng-controller="menuController as menus">
-            <ul id="menu" class="nav nav-pills nav-stacked">
-                <li ng-class="menus.tabClass(tab.Nome)" ng-repeat="tab in menus.rowCollection"
-                    ng-init="menus.setSelectedTab(menus.getActiveTab())" ng-click="menus.setSelectedTab(tab.Nome)">
-                    <a ui-sref="{{tab.Link}}">{{tab.Nome}}</a>
-                </li>
-            </ul>
-        </nav>
+        <div ui-view="menu"></div>
         <section class="content-wrapper main-content clear-fix col-md-10 col-xs-12 col-sm-12">
-            <div ui-view></div>
+            <div ui-view="content"></div>
         </section>
     </main>
 
@@ -59,6 +52,7 @@
 
 <!-- Services-->
 <script type="text/javascript" src="app/services/farmaciasService.js"></script>
+<script type="text/javascript" src="app/services/authorizationService.js"></script>
 
 <!-- Controllers -->
 <script type="text/javascript" src="app/controllers/farmaciaListController.js"></script>
@@ -66,6 +60,7 @@
 <script type="text/javascript" src="app/controllers/farmaciaDetailController.js"></script>
 <script type="text/javascript" src="app/controllers/distritoController.js"></script>
 <script type="text/javascript" src="app/controllers/menuController.js"></script>
+<script type="text/javascript" src="app/controllers/loginController.js"></script>
 
 
 <!-- Plugins -->

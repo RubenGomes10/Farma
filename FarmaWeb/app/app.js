@@ -15,38 +15,100 @@
         $stateProvider
         .state('farmacia', {
             url: '/farmacia',
-            templateUrl: '/app/views/farmaciaList.html',
-            controller: 'farmaciaListController',
-            controllerAs: 'vm'
+            views: {
+                menu: {
+                    templateUrl: '/app/views/_menu.html',
+                    controller: 'menuController',
+                    controllerAs: 'vm',
+                },
+                content: {
+                    templateUrl: '/app/views/farmaciaList.html',
+                    controller: 'farmaciaListController',
+                    controllerAs: 'vm',
+                }
+            },
         })
         .state('createFarmacia', {
             url: '/createFarmacia',
-            templateUrl: '/app/views/farmaciaCreate.html',
-            controller: 'farmaciaCreateController',
-            controllerAs: 'vm'
+            views: {
+                menu: {
+                    templateUrl: '/app/views/_menu.html',
+                    controller: 'menuController',
+                    controllerAs: 'vm',
+                },
+                content: {
+                    templateUrl: '/app/views/farmaciaCreate.html',
+                    controller: 'farmaciaCreateController',
+                    controllerAs: 'vm'
+                }
+            },
         })
         .state('detailFarmacia', {
             url: '/detailFarmacia/:id',
-            templateUrl: '/app/views/farmaciaDetail.html',
-            controller: 'farmaciaDetailController',
-            controllerAs: 'vm'
+            views: {
+                menu: {
+                    templateUrl: '/app/views/_menu.html',
+                    controller: 'menuController',
+                    controllerAs: 'vm',
+                },
+                content: {
+                    templateUrl: '/app/views/farmaciaDetail.html',
+                    controller: 'farmaciaDetailController',
+                    controllerAs: 'vm'
+                }
+            },
         })
         .state('distrito', {
             url: '/distrito',
-            templateUrl: '/app/views/distritoList.html',
-            controller: 'districtController',
-            controllerAs: 'vm'
+            views: {
+                menu: {
+                    templateUrl: '/app/views/_menu.html',
+                    controller: 'menuController',
+                    controllerAs: 'vm',
+                },
+                content: {
+                    templateUrl: '/app/views/distritoList.html',
+                    controller: 'districtController',
+                    controllerAs: 'vm',
+                }
+            },
+            requireLogin: true,
         })
         .state('cliente', {
             url: '/cliente',
-            templateUrl: '/app/views/farmaciaCreate.html',
-            controller: 'farmaciaCreateController',
-            controllerAs: 'vm'
+            views: {
+                menu: {
+                    templateUrl: '/app/views/_menu.html',
+                    controller: 'menuController',
+                    controllerAs: 'vm',
+                },
+                content: {
+                    templateUrl: '/app/views/farmaciaCreate.html',
+                    controller: 'farmaciaCreateController',
+                    controllerAs: 'vm'
+                }
+            },
+        })
+        .state('login', {
+            url: '/login',            
+            views: {
+                content: {
+                    templateUrl: '/app/views/login.html',
+                }
+            },
         });
     }
 
-    function rootScope($rootScope) {
+    rootScope.$inject = ['$rootScope', '$state'];
+    function rootScope($rootScope, $state) {
         $rootScope.baseURL = 'http://localhost:30974/api';
+        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+            if (toState.requireLogin) {
+                event.preventDefault();
+                console.log("You must connect before you access to this url!!");
+                $state.go('login');
+            }
+        });
     }
 
 })();

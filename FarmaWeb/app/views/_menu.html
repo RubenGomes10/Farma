@@ -1,0 +1,8 @@
+﻿<nav class="col-md-2 col-xs-12 col-sm-12 no-padding">
+    <ul id="menu" class="nav nav-pills nav-stacked">
+        <li ng-class="vm.tabClass(tab.Nome)" ng-repeat="tab in vm.rowCollection"
+            ng-init="vm.setSelectedTab(vm.getActiveTab())" ng-click="vm.setSelectedTab(tab.Nome)">
+            <a ui-sref="{{tab.Link}}">{{tab.Nome}}</a>
+        </li>
+    </ul>
+</nav>
