@@ -14,32 +14,20 @@
             createFarmacia: createFarmacia
         };
 
-        //vm.list =
-        //    [
-        //        { Id: 1, name: "Cais do Sodre", district: "Lisboa", clientType: "Barraca", initialDate: "21/03/2014" },
-        //        { Id: 2, name: "Feira", district: "Aveiro", clientType: "Banca" },
-        //        { Id: 3, name: "Porto", district: "Porto", clientType: "Banca" },
-        //        { Id: 4, name: "Feira", district: "Aveiro", clientType: "Saúde" },
-        //        { Id: 5, name: "Aveiro", district: "Aveiro", clientType: "Banca" },
-        //        { Id: 6, name: "Ourem", district: "Leiria", clientType: "Banca" },
-        //        { Id: 7, name: "Espinho", district: "Aveiro", clientType: "Saúde" },
-        //        { Id: 8, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
-        //        { Id: 9, name: "Olhao", district: "Algarve", clientType: "Banca" },
-        //        { Id: 10, name: "Expo", district: "Lisboa", clientType: "Saúde" },
-        //        { Id: 11, name: "Beja", district: "Beja", clientType: "Banca" },
-        //        { Id: 12, name: "Ourem", district: "Leiria", clientType: "Banca" },
-        //        { Id: 13, name: "Espinho", district: "Aveiro", clientType: "Saúde" },
-        //        { Id: 14, name: "Coimbra", district: "Coimbra", clientType: "Banca" },
-        //        { Id: 15, name: "Olhao", district: "Algarve", clientType: "Banca" },
-        //        { Id: 16, name: "Expo", district: "Lisboa", clientType: "Banca" },
-        //        { Id: 17, name: "Beja", district: "Beja" }
-        //    ];
+        return farmaciasAPI;
 
         function getAllFarmacias(params) {
             return $http({
                 method: 'GET',
                 url: $rootScope.baseURL + '/farmacia?start=' + params.start + '&number='
                     + params.number + '&sortField=' + params.sortField + '&sortDir=' + params.sortDir
+            }).then(function (response) {
+                return response.data;
+            }).catch(function (response) {
+                if (!angular.isObject(response.data) || !response.data.message) {
+                    return "Aconteceu um erro inesperado na ligação ao servidor";
+                }
+                return response.data.errorMessage;
             });
         }
 
@@ -92,9 +80,5 @@
         function createFarmacia(farmacia) {
             vm.list.push(farmacia);
         }
-
-        return farmaciasAPI;
-
     }
-
 })();

@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('farmaciaCreateController', controller);
+    angular.module('FarmaciaApp').controller('FarmaciaCreateController', controller);
 
     controller.$inject = ['$filter', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
     function controller($filter, $farmaciasService, dateFilter) {

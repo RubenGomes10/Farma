@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('districtController', controller);
+    angular.module('FarmaciaApp').controller('DistrictController', controller);
 
     controller.$inject = ['$filter'];
     function controller($filter) {

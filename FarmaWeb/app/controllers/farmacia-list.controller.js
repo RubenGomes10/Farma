@@ -1,10 +1,10 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('farmaciaListController', controller);
+    angular.module('FarmaciaApp').controller('FarmaciaListController', controller);
 
-    controller.$inject = ['$filter', 'farmaciasService'];
-    function controller($filter, $farmaciasService) {
+    controller.$inject = ['farmaciasService'];
+    function controller($farmaciasService) {
         var vm = this;
         vm.itemsByPage = 5;
         vm.rowCollection = [];
@@ -34,17 +34,17 @@
                 }
             $farmaciasService.getAll(smartTableParams).then(function (response) {
                 successCallback(response, tableState);
-            }
-            , errorCallback);
+            })
+            .catch(errorCallback);
         }
 
         function successCallback(response, tableState) {
-            vm.rowCollection = response.data.FarmaciaList;
-            tableState.pagination.numberOfPages = Math.ceil(response.data.TotalRecords / tableState.pagination.number);
+            vm.rowCollection = response.FarmaciaList;
+            tableState.pagination.numberOfPages = Math.ceil(response.TotalRecords / tableState.pagination.number);
         }
 
         function errorCallback(response) {
-            alertify.error('Error when fetching server');
+            alertify.error(response);
         }
     }
 })();

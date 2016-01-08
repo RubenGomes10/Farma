@@ -18,12 +18,12 @@
             views: {
                 menu: {
                     templateUrl: '/app/views/_menu.html',
-                    controller: 'menuController',
+                    controller: 'MenuController',
                     controllerAs: 'vm',
                 },
                 content: {
-                    templateUrl: '/app/views/farmaciaList.html',
-                    controller: 'farmaciaListController',
+                    templateUrl: '/app/views/farmacia-list.html',
+                    controller: 'FarmaciaListController',
                     controllerAs: 'vm',
                 }
             },
@@ -33,12 +33,12 @@
             views: {
                 menu: {
                     templateUrl: '/app/views/_menu.html',
-                    controller: 'menuController',
+                    controller: 'MenuController',
                     controllerAs: 'vm',
                 },
                 content: {
-                    templateUrl: '/app/views/farmaciaCreate.html',
-                    controller: 'farmaciaCreateController',
+                    templateUrl: '/app/views/farmacia-create.html',
+                    controller: 'FarmaciaCreateController',
                     controllerAs: 'vm'
                 }
             },
@@ -48,12 +48,12 @@
             views: {
                 menu: {
                     templateUrl: '/app/views/_menu.html',
-                    controller: 'menuController',
+                    controller: 'MenuController',
                     controllerAs: 'vm',
                 },
                 content: {
-                    templateUrl: '/app/views/farmaciaDetail.html',
-                    controller: 'farmaciaDetailController',
+                    templateUrl: '/app/views/farmacia-detail.html',
+                    controller: 'FarmaciaDetailController',
                     controllerAs: 'vm'
                 }
             },
@@ -63,12 +63,12 @@
             views: {
                 menu: {
                     templateUrl: '/app/views/_menu.html',
-                    controller: 'menuController',
+                    controller: 'MenuController',
                     controllerAs: 'vm',
                 },
                 content: {
-                    templateUrl: '/app/views/distritoList.html',
-                    controller: 'districtController',
+                    templateUrl: '/app/views/distrito-list.html',
+                    controller: 'DistrictController',
                     controllerAs: 'vm',
                 }
             },
@@ -79,12 +79,12 @@
             views: {
                 menu: {
                     templateUrl: '/app/views/_menu.html',
-                    controller: 'menuController',
+                    controller: 'MenuController',
                     controllerAs: 'vm',
                 },
                 content: {
-                    templateUrl: '/app/views/farmaciaCreate.html',
-                    controller: 'farmaciaCreateController',
+                    templateUrl: '/app/views/farmacia-create.html',
+                    controller: 'FarmaciaCreateController',
                     controllerAs: 'vm'
                 }
             },
