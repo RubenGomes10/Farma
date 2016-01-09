@@ -382,16 +382,13 @@ input::-webkit-inner-spin-button {
 
     &.alert-temp {
         @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
-        
-        /*display: block !important;
-        opacity: 1;
-        text-transform: uppercase;
-        padding: 15px 15px 15px 15px;
-        max-height: 55px;*/
+        max-height: 55px;
         @extend %alert-config
+
     }
 
     &.alert-temp-login{
+        max-height: 300px;
         @include full-width;
         @extend %alert-config
         
@@ -411,6 +408,12 @@ input::-webkit-inner-spin-button {
         @include custom-transition($default-trans-time, $default-trans-type, $default-trans-prop);
         max-height: 0px;
     }
+}
+
+.error-multitext{
+    max-height: 300px;
+    background-color: #f2dede;
+    color: #a94442;
 }
 
 /*LOGIN*/

@@ -16,6 +16,7 @@
             authModel: authModel,
             login: login,
             logOut: logout,
+            register: register,
             fillData: fillData
         };
 
@@ -66,6 +67,17 @@
             authModel.userName = '';
             authModel.userRetrieved = false;
             authModel.roles.slice(0, authData.roles.length);
+        }
+
+        function register(registerData) {
+            return accountService.register(registerData).then(
+                function (result) {
+                    return result;
+                })
+                .catch(function (error) {
+                    return loginError(error);
+                });
+
         }
 
         function fillData() {

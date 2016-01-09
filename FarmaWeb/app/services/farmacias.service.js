@@ -19,7 +19,7 @@
         function getAllFarmacias(params) {
             return $http({
                 method: 'GET',
-                url: config.baseURL + '/farmacia?start=' + params.start + '&number='
+                url: config.apiURL + '/farmacia?start=' + params.start + '&number='
                     + params.number + '&sortField=' + params.sortField + '&sortDir=' + params.sortDir
             }).then(function (response) {
                 return response.data;

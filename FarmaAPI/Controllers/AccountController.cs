@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using FarmaAPI.Models;
 using FarmaAPI.Providers;
 using FarmaAPI.Results;
+using System.Web.Http.Cors;
 
 namespace FarmaAPI.Controllers
 {

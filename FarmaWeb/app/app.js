@@ -106,6 +106,15 @@
                     controllerAs: 'vm'
                 }
             },
+        }).state('register', {
+            url: '/register',
+            views: {
+                content: {
+                    templateUrl: '/app/views/register.html',
+                    controller: 'RegisterController',
+                    controllerAs: 'vm'
+                }
+            },
         });
     }
 

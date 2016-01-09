@@ -3,13 +3,14 @@
 
     angular.module('FarmaciaApp').factory('accountService', accountService);
 
-    accountService.$inject = ['$http', '$q', 'config'];
-    function accountService($http, $q, config) {
+    accountService.$inject = ['$http', '$q', '$httpParamSerializerJQLike', 'config'];
+    function accountService($http, $q,$httpParamSerializerJQLike, config) {
         var controllerURL = '/Account';
 
         var service = {
             login: login,
             logout: logout,
+            register: register
         };
 
         return service;
@@ -37,6 +38,19 @@
             return $http({
                 method: 'POST',
                 url: config.baseURL + '/Logout'
+            });
+        };
+
+        function register(registerData) {
+            return $http({
+                method: 'POST',
+                url: config.apiURL + controllerURL + '/Register',
+                data: $httpParamSerializerJQLike(registerData),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }).then(function (response) {
+                return response.data;
+            }).catch(function (error) {
+                return $q.reject(error);
             });
         };
     }

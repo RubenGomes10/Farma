@@ -94,8 +94,7 @@ button {
   display: block !important;
   opacity: 1;
   text-transform: uppercase;
-  padding: 15px 15px 15px 15px;
-  max-height: 55px; }
+  padding: 15px 15px 15px 15px; }
 
 .no-margin-lateral {
   margin-left: 0 !important;
@@ -407,12 +406,9 @@ input::-webkit-inner-spin-button {
     -o-transition: 0.5s linear all;
     -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
-    /*display: block !important;
-    opacity: 1;
-    text-transform: uppercase;
-    padding: 15px 15px 15px 15px;
-    max-height: 55px;*/ }
+    max-height: 55px; }
   .alert.alert-temp-login {
+    max-height: 300px;
     width: 100%; }
   .alert button {
     display: none; }
@@ -430,6 +426,11 @@ input::-webkit-inner-spin-button {
     -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
     max-height: 0px; }
+
+.error-multitext {
+  max-height: 300px;
+  background-color: #f2dede;
+  color: #a94442; }
 
 /*LOGIN*/
 .form-login-heading {

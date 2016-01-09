@@ -30,6 +30,8 @@ namespace FarmaAPI
 
             //Formatters
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            //GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+            //config.Formatters.Insert(0, new System.Net.Http.Formatting.JsonMediaTypeFormatter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

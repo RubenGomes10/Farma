@@ -13,7 +13,6 @@ using FarmaModel;
 namespace FarmaAPI.Controllers
 {
     //[Authorize]
-    [EnableCors(origins: "http://localhost:28285", headers: "*", methods: "*")]
     public class FarmaciaController : ApiController
     {
         private IUnitOfWork _repository;

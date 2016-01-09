@@ -3,11 +3,12 @@
 
     angular.module('FarmaciaApp').factory('authInterceptorService', authInterceptorService);
 
-    authInterceptorService.$inject = ['$injector','$q', 'localStorageService'];
-    function authInterceptorService($injector,$q, localStorageService) {
+    authInterceptorService.$inject = ['$injector','$q', 'localStorageService', 'usSpinnerService'];
+    function authInterceptorService($injector, $q, localStorageService, usSpinnerService) {
 
         var service = {
             request: request,
+            response: response,
             responseError: responseError
         }
 
@@ -15,6 +16,7 @@
 
         function request(config) {
             console.log('request interceptor');
+            usSpinnerService.spin('spinner');
             config.headers = config.headers || {};
 
             var authData = localStorageService.get('authorizationData');
@@ -27,6 +29,7 @@
 
         function responseError(error) {
             console.log('response interceptor');
+            usSpinnerService.stop('spinner');
             var loggedIn = false;
             var authData = localStorageService.get('authorizationData');
             if (authData) {
@@ -37,6 +40,12 @@
                 $injector.get('$state').go('login');
             }
             return $q.reject(error);
+        }
+
+        function response(response) {
+            usSpinnerService.stop('spinner');
+            console.log('response');
+            return response;
         }
     }
 

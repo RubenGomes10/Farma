@@ -87,6 +87,7 @@
     <Content Include="app\controllers\farmacia-detail.controller.js" />
     <Content Include="app\controllers\farmacia-list.controller.js" />
     <Content Include="app\controllers\farmacia-create.controller.js" />
+    <Content Include="app\controllers\register.controller.js" />
     <Content Include="app\controllers\login.controller.js" />
     <Content Include="app\controllers\menu.controller.js" />
     <Content Include="app\directives\animation.directive.js" />
@@ -101,6 +102,7 @@
     <Content Include="app\services\account.service.js" />
     <Content Include="app\services\farmacias.service.js" />
     <Content Include="app\views\distrito-list.html" />
+    <Content Include="app\views\register.html" />
     <Content Include="app\views\login.html" />
     <Content Include="app\views\_farmacia-form.html" />
     <Content Include="app\views\farmacia-detail.html" />
