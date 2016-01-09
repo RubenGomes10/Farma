@@ -3,8 +3,8 @@
 
     angular.module('FarmaciaApp').factory('farmaciasService', FarmaciasService);
 
-    FarmaciasService.$inject = ['$http', '$filter', '$rootScope'];
-    function FarmaciasService($http, $filter, $rootScope) {
+    FarmaciasService.$inject = ['$http', '$filter', 'config'];
+    function FarmaciasService($http, $filter, config) {
         var vm = this;
         var farmaciasAPI = {
             getAll: getAllFarmacias,
@@ -19,7 +19,7 @@
         function getAllFarmacias(params) {
             return $http({
                 method: 'GET',
-                url: $rootScope.baseURL + '/farmacia?start=' + params.start + '&number='
+                url: config.baseURL + '/farmacia?start=' + params.start + '&number='
                     + params.number + '&sortField=' + params.sortField + '&sortDir=' + params.sortDir
             }).then(function (response) {
                 return response.data;

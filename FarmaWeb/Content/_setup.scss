@@ -71,6 +71,14 @@ $default-trans-type: linear;
     }
 }
 
+%alert-config{
+    display: block !important;
+    opacity: 1;
+    text-transform: uppercase;
+    padding: 15px 15px 15px 15px;
+    max-height: 55px;
+}
+
 @include no-margin(sides);
 @include no-margin(all);
 @include no-padding(all);

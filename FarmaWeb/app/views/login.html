@@ -1,10 +1,13 @@
 ﻿<div id="loginDiv" class="col-md-4 col-md-offset-5">
-    <form class="form" name="loginForm" callback="vm.register()">
+    <form class="form" name="loginForm" callback="vm.login()">
         <h1 class="form-login-heading">Login</h1>
-        <custom-textbox control-id="usernameInput" label="Username" model="vm.model.username" type="text"
-                        is-required="true" form="farmaciaForm" css-class="form-group"></custom-textbox>
-        <custom-textbox control-id="passwordInput" label="Password" model="vm.model.password" type="password"
-                        is-required="true" form="farmaciaForm" css-class="form-group"></custom-textbox>
+        <div id="errorDiv" ng-hide="vm.errorMessage == ''" ng-class="{'alert-temp-login': vm.errorMessage != ''}" class="alert alert-danger col-md-12" role="alert">
+            {{vm.errorMessage}}
+        </div>
+        <custom-textbox control-id="usernameInput" label="Username" model="vm.authModel.userName" type="text"
+                        is-required="true" form="farmaciaForm" css-class="form-group col-md-12"></custom-textbox>
+        <custom-textbox control-id="passwordInput" label="Password" model="vm.authModel.password" type="password"
+                        is-required="true" form="farmaciaForm" css-class="form-group col-md-12"></custom-textbox>
         <!--<input type="text" class="form-control"
            placeholder="Username" ng-model="vm.model.userName" required autofocus>-->
 
@@ -15,12 +18,8 @@
         <input type="password" class="form-control"
                placeholder="Confirm Password" ng-model="registration.confirmPassword" required>-->
         <button class="btn btn-lg btn-info btn-block col-md-2"
-                type="submit" ng-click="signUp()">
+                type="submit" ng-click="vm.login()">
             Submit
         </button>
-        <div ng-hide="message == ''"
-             ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
-            {{vm.errorMessage}}
-        </div>
     </form>
 </div>

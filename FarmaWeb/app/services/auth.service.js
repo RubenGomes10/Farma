@@ -3,38 +3,37 @@
 
     angular.module('FarmaciaApp').factory('authService', authService);
 
-    authService.$inject = ['$http', '$injector', '$q', 'dataservice', 'localStorageService'];
-    function authService($http, $injector, $q, dataservice, localStorageService) {
-        var vm = this;
-        vm.errorMessage = '';
-        vm.authModel = {
+    authService.$inject = ['$http', '$injector', '$q', 'accountService', 'localStorageService'];
+    function authService($http, $injector, $q, accountService, localStorageService) {
+        var authModel = {
             isAuthenticated: false,
             userName: '',
             userRetrieved: false,
             roles: []
         };
 
-        vm.service = {
-            authModel: vm.authModel,
+        var service = {
+            authModel: authModel,
             login: login,
-            logOut: logOut,
+            logOut: logout,
             fillData: fillData
         };
 
         return service;
 
         function login(loginData) {
-            return dataservice.login(loginData).then(
-                function () {
+            return accountService.login(loginData).then(
+                function (result) {
                     loginSucess(result, loginData);
                 })
-                .catch(function () {
-                    loginError(error);
+                .catch(function (error) {
+                    return loginError(error);
+                    //return $q.reject(error);
                 });
         }
 
-        function logOut() {
-            dataservice.logout().then(function () {
+        function logout() {
+            accountService.logout().then(function () {
                 clearAuthStorage();
                 $injector.get('$state').go('login');
             }, function () {
@@ -50,35 +49,35 @@
                 userName: loginData.userName
             });
 
-            vm.authModel.isAuthenticated = true;
-            vm.authModel.userName = loginData.userName;
-            vm.authModel.userRetrieved = false;
-            //vm.authModel.roles = loginData.Roles;
+            authModel.isAuthenticated = true;
+            authModel.userName = loginData.userName;
+            authModel.userRetrieved = false;
+            //authModel.roles = loginData.Roles;
             return result;
         }
 
         function loginError(error) {
-            vm.errorMessage = error
+            return $q.reject(error);
         }
 
         function clearAuthStorage() {
             localStorageService.remove('authorizationData');
-            vm.authModel.isAuthenticated = false;
-            vm.authModel.userName = '';
-            vm.authModel.userRetrieved = false;
-            vm.authModel.roles.slice(0, authData.roles.length);
+            authModel.isAuthenticated = false;
+            authModel.userName = '';
+            authModel.userRetrieved = false;
+            authModel.roles.slice(0, authData.roles.length);
         }
 
         function fillData() {
             var data = localStorageService.get('authorizationData');
             if (data) {
-                vm.authModel.isAuthenticated = true;
-                vm.authModel.userName = data.userName;
-                if (!vm.authModel.userRetrieved) {
-                    return dataservice.getUserInfo().then(function (result) {
-                        vm.authModel.userRetreived = true;
+                authModel.isAuthenticated = true;
+                authModel.userName = data.userName;
+                if (!authModel.userRetrieved) {
+                    return accountService.getUserInfo().then(function (result) {
+                        authModel.userRetreived = true;
                         var userData = result.data;
-                        vm.authModel.roles = userData.roles;
+                        authModel.roles = userData.roles;
                     });
                 }
             }

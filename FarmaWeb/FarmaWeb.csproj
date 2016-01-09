@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\config.js" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\distrito.controller.js" />
     <Content Include="app\controllers\farmacia-detail.controller.js" />
@@ -97,6 +98,7 @@
     <Content Include="app\directives\validate-form.directive.js" />
     <Content Include="app\services\auth-interceptor.service.js" />
     <Content Include="app\services\auth.service.js" />
+    <Content Include="app\services\account.service.js" />
     <Content Include="app\services\farmacias.service.js" />
     <Content Include="app\views\distrito-list.html" />
     <Content Include="app\views\login.html" />
@@ -124,6 +126,8 @@
     <Content Include="Scripts\alertify\alertify.min.js" />
     <Content Include="Scripts\angular-local-storage\angular-local-storage.js" />
     <Content Include="Scripts\angular-local-storage\angular-local-storage.min.js" />
+    <Content Include="Scripts\angular-spinner\angular-spinner.js" />
+    <Content Include="Scripts\angular-spinner\angular-spinner.min.js" />
     <Content Include="Scripts\angular-ui\angular-animate.js" />
     <Content Include="Scripts\angular-ui\angular-animate.min.js" />
     <Content Include="Scripts\angular-ui\angular-locale_pt-pt.js" />
@@ -897,11 +901,14 @@
     <Content Include="Content\_reset.scss" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Content\_small-screen.scss" />
+    <Content Include="Scripts\angular-spinner\angular-spinner.min.js.map" />
     <None Include="Scripts\jquery\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery\jquery-1.9.1.min.js" />
     <Content Include="Scripts\plugins\smart-table.js" />
     <Content Include="Scripts\plugins\smart-table.min.js" />
+    <Content Include="Scripts\angular-spinner\spin.js" />
+    <Content Include="Scripts\angular-spinner\spin.min.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery\jquery-1.9.1.min.map" />
   </ItemGroup>

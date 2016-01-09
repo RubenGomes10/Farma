@@ -90,6 +90,13 @@ button {
 
 /* variables */
 /*placeholder, mixins*/
+.alert.alert-temp, .alert.alert-temp-login {
+  display: block !important;
+  opacity: 1;
+  text-transform: uppercase;
+  padding: 15px 15px 15px 15px;
+  max-height: 55px; }
+
 .no-margin-lateral {
   margin-left: 0 !important;
   margin-right: 0 !important; }
@@ -400,11 +407,13 @@ input::-webkit-inner-spin-button {
     -o-transition: 0.5s linear all;
     -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
-    display: block !important;
+    /*display: block !important;
     opacity: 1;
     text-transform: uppercase;
     padding: 15px 15px 15px 15px;
-    max-height: 55px; }
+    max-height: 55px;*/ }
+  .alert.alert-temp-login {
+    width: 100%; }
   .alert button {
     display: none; }
 

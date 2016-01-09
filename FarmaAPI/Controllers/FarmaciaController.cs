@@ -22,7 +22,7 @@ namespace FarmaAPI.Controllers
             this._repository = repository;
         }
         // GET: Farmacia
-        public FarmaciaListViewModel Get(int start, int number, string sortField, string sortDir)
+        public IHttpActionResult Get(int start, int number, string sortField, string sortDir)
         {
             var query = _repository.FarmaciaRepository.GetAll();
             IEnumerable<FarmaciaViewModel> listaFarmacias = query.OrderBy(sortField + " " + sortDir)
@@ -40,10 +40,16 @@ namespace FarmaAPI.Controllers
                 FarmaciaList = listaFarmacias, 
                 TotalRecords = totalRecords 
             };
-            return listaFarmaciasTable;
 
+            if (totalRecords != 0)
+            {
+                return Ok(listaFarmaciasTable);
+            }
+            return BadRequest("Não foram encontrados dados");
         }
 
+        [HttpGet]
+        [Authorize(Roles = "Admin, User")]
         public FarmaciaViewModel Get(int id)
         {
             var farmaDetail = _repository.FarmaciaRepository.GetById(id);
@@ -57,6 +63,8 @@ namespace FarmaAPI.Controllers
         }
 
         // POST: api/test
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
         public void Post([FromBody]string value)
         {
         }

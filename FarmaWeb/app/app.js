@@ -1,14 +1,21 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp', ['ui.router', 'ui.bootstrap', 'smart-table', 'ngAnimate'])
+    angular.module('FarmaciaApp', [
+        'ui.router',
+        'ui.bootstrap',
+        'smart-table',
+        'ngAnimate',
+        'LocalStorageModule',
+        'angularSpinner'
+    ])
     .config(appConfig)
-    .run(rootScope);
+    .run(run);
 
-    appConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
-    function appConfig($stateProvider, $urlRouterProvider) {
-
+    function appConfig($stateProvider, $urlRouterProvider, $httpProvider) {
+        $httpProvider.interceptors.push('authInterceptorService');
         $urlRouterProvider.otherwise('/farmacia');
         //se tiver aqui os controllers não é preciso por no HTML
         //o controller As é para não esquecer para depois se usar o vm dentro do controller
@@ -73,6 +80,7 @@
                 }
             },
             requireLogin: true,
+            roles: ['Admin']
         })
         .state('cliente', {
             url: '/cliente',
@@ -94,20 +102,25 @@
             views: {
                 content: {
                     templateUrl: '/app/views/login.html',
+                    controller: 'LoginController',
+                    controllerAs: 'vm'
                 }
             },
         });
     }
 
-    rootScope.$inject = ['$rootScope', '$state'];
-    function rootScope($rootScope, $state) {
-        $rootScope.baseURL = 'http://localhost:30974/api';
+    run.$inject = ['$rootScope', '$state', 'usSpinnerService'];
+    function run($rootScope, $state, usSpinnerService) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+            usSpinnerService.spin('spinner');
             if (toState.requireLogin) {
                 event.preventDefault();
                 console.log("You must connect before you access to this url!!");
                 $state.go('login');
             }
+        });
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            usSpinnerService.stop('spinner');
         });
     }
 

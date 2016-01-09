@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('FarmaciaApp').controller('MnuController', controller);
+    angular.module('FarmaciaApp').controller('MenuController', controller);
 
     controller.$inject = ['$http']; //para ir buscar os menus dinamicamente -- Optimização
     function controller($http) {

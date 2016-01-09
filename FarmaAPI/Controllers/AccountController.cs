@@ -60,10 +60,32 @@ namespace FarmaAPI.Controllers
 
             return new UserInfoViewModel
             {
-                Email = User.Identity.GetUserName(),
+                Username = User.Identity.GetUserName(),
                 HasRegistered = externalLogin == null,
                 LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
             };
+        }
+
+        [HttpGet]
+        [Route("LocalUserInfo")]
+        public UserInfoViewModel GetLocalUserInfo()
+        {
+            var vm = new UserInfoViewModel { Roles = new List<string>() };
+
+            var userId = User.Identity.GetUserId();
+
+            var user = UserManager.FindById(userId);
+
+            vm.Username = user.UserName;
+            //vm.FirstName = user.FirstName;
+            //vm.LastName = user.LastName;
+
+            foreach (var role in UserManager.GetRoles(userId))
+            {
+                vm.Roles.Add(role);
+            }
+
+            return vm;
         }
 
         // POST api/Account/Logout
@@ -328,7 +350,9 @@ namespace FarmaAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { 
+                UserName = model.Username, 
+            };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
