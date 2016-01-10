@@ -7,7 +7,7 @@
     function controller($filter) {
         var vm = this;
         vm.displayedCollection = [];
-
+        vm.createFarmaciasLink = 'createFarmacia';
         vm.rowCollection =
             [{ name: "Franco", district: "Lisboa" },
             { name: "Feira", district: "Aveiro" },

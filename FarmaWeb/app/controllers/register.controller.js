@@ -25,10 +25,11 @@
                 for (var key in error.data.ModelState) {
                     for (var i = 0; i < error.data.ModelState[key].length; i++) {
                         errors.push(error.data.ModelState[key][i]);
+                        alertify.error(error.data.ModelState[key][i])
                     }
                 }
-                vm.errorMessage = "Falha no registo: " + '\n' + errors.join('\n');
-                $rootScope.$broadcast('resize::errorChange');
+                //vm.errorMessage = "Falha no registo: " + '\n' + errors.join('\n');
+                //$rootScope.$broadcast('resize::errorChange');
                 //$timeout(function () {
                 //    vm.errorMessage = "";
                 //}, 3000);

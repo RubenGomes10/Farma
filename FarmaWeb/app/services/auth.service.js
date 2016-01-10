@@ -15,7 +15,7 @@
         var service = {
             authModel: authModel,
             login: login,
-            logOut: logout,
+            logout: logout,
             register: register,
             fillData: fillData
         };
@@ -66,7 +66,7 @@
             authModel.isAuthenticated = false;
             authModel.userName = '';
             authModel.userRetrieved = false;
-            authModel.roles.slice(0, authData.roles.length);
+            authModel.roles = [];
         }
 
         function register(registerData) {
@@ -87,9 +87,9 @@
                 authModel.userName = data.userName;
                 if (!authModel.userRetrieved) {
                     return accountService.getUserInfo().then(function (result) {
-                        authModel.userRetreived = true;
+                        authModel.userRetrieved = true;
                         var userData = result.data;
-                        authModel.roles = userData.roles;
+                        authModel.roles = result.roles;
                     });
                 }
             }

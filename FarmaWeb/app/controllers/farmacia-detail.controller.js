@@ -4,7 +4,7 @@
     angular.module('FarmaciaApp').controller('FarmaciaDetailController', controller);
 
     controller.$inject = ['$filter','$stateParams', 'farmaciasService', 'dateFilter', 'datepickerDirective'];
-    function controller($filter, $stateParams, $farmaciasService, dateFilter) {
+    function controller($filter, $stateParams, $farmaciasService, dateFilter, datepickerDirective) {
         var vm = this;
         vm.readonly = true;
 

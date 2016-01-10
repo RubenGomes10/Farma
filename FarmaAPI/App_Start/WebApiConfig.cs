@@ -10,6 +10,7 @@ using FarmaDAL;
 using FarmaModel;
 using FarmaAPI.Resolver;
 using System.Net.Http.Headers;
+using System.Web.Http.Cors;
 
 namespace FarmaAPI
 {
@@ -35,7 +36,9 @@ namespace FarmaAPI
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            config.EnableCors();
+            //config.EnableCors();
+            var cors = new EnableCorsAttribute("http://localhost:28285", "*", "*");
+            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -72,7 +72,7 @@
         function getFarmaciaById(id) {
             return $http({
                 method: 'GET',
-                url: $rootScope.baseURL + '/farmacia/'+id
+                url: config.apiURL + '/farmacia/' + id
             });
             //return $filter('filter')(vm.list, { Id: id })[0];
         }

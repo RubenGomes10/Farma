@@ -12,7 +12,8 @@ using FarmaModel;
 
 namespace FarmaAPI.Controllers
 {
-    //[Authorize]
+
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class FarmaciaController : ApiController
     {
         private IUnitOfWork _repository;
@@ -21,6 +22,7 @@ namespace FarmaAPI.Controllers
             this._repository = repository;
         }
         // GET: Farmacia
+        [Authorize]
         public IHttpActionResult Get(int start, int number, string sortField, string sortDir)
         {
             var query = _repository.FarmaciaRepository.GetAll();

@@ -34,6 +34,7 @@
                     controllerAs: 'vm',
                 }
             },
+            requireLogin: true
         })
         .state('createFarmacia', {
             url: '/createFarmacia',
@@ -49,6 +50,7 @@
                     controllerAs: 'vm'
                 }
             },
+            requireLogin: true
         })
         .state('detailFarmacia', {
             url: '/detailFarmacia/:id',
@@ -64,6 +66,7 @@
                     controllerAs: 'vm'
                 }
             },
+            requireLogin: true
         })
         .state('distrito', {
             url: '/distrito',
@@ -94,8 +97,9 @@
                     templateUrl: '/app/views/farmacia-create.html',
                     controller: 'FarmaciaCreateController',
                     controllerAs: 'vm'
-                }
+                },
             },
+            requireLogin: true,
         })
         .state('login', {
             url: '/login',            
@@ -118,13 +122,15 @@
         });
     }
 
-    run.$inject = ['$rootScope', '$state', 'usSpinnerService'];
-    function run($rootScope, $state, usSpinnerService) {
+    run.$inject = ['$rootScope', '$state', 'usSpinnerService', 'authService'];
+    function run($rootScope, $state, usSpinnerService, authService) {
+        authService.fillData();
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             usSpinnerService.spin('spinner');
-            if (toState.requireLogin) {
+            if (toState.requireLogin && authService.authModel.isAuthenticated == false) {
                 event.preventDefault();
                 console.log("You must connect before you access to this url!!");
+                usSpinnerService.stop('spinner');
                 $state.go('login');
             }
         });

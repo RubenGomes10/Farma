@@ -20,10 +20,11 @@
                 $state.go('farmacia');
             })
             .catch(function (error) {
-                vm.errorMessage = "User ou Password Errados";
-                $timeout(function () {
-                    vm.errorMessage = "";
-                }, 3000);
+                alertify.error("User ou Password Errados");
+                //vm.errorMessage = "User ou Password Errados";
+                //$timeout(function () {
+                //    vm.errorMessage = "";
+                //}, 3000);
                 vm.authModel.userName = '';
                 vm.authModel.password = '';
                 //alertify('User ou Password Errados');

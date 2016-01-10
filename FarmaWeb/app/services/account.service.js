@@ -10,7 +10,8 @@
         var service = {
             login: login,
             logout: logout,
-            register: register
+            register: register,
+            getUserInfo : getUserInfo
         };
 
         return service;
@@ -37,7 +38,7 @@
         function logout() {
             return $http({
                 method: 'POST',
-                url: config.baseURL + '/Logout'
+                url: config.apiURL + controllerURL + '/Logout'
             });
         };
 
@@ -53,5 +54,16 @@
                 return $q.reject(error);
             });
         };
+
+        function getUserInfo() {
+            return $http({
+                method: 'GET',
+                url: config.apiURL + controllerURL + '/LocalUserInfo'
+            }).then(function (response) {
+                return response.data;
+            }).catch(function (error) {
+                return $q.reject(error);
+            });
+        }
     }
 })();

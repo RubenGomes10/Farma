@@ -90,6 +90,7 @@
     <Content Include="app\controllers\register.controller.js" />
     <Content Include="app\controllers\login.controller.js" />
     <Content Include="app\controllers\menu.controller.js" />
+    <Content Include="app\directives\elastic.directive.js" />
     <Content Include="app\directives\animation.directive.js" />
     <Content Include="app\directives\date-format.directive.js" />
     <Content Include="app\directives\dropdown.directive.js" />

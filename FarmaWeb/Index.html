@@ -10,15 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link href="favicon.ico" rel="shortcut icon" />
 </head>
-<body>
-    <header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    <!--<img src="LOGO.png" , alt="Home" />-->
-                    <a ui-sref="register">Registar</a>
-                </p>
-            </div>
+<body ng-controller="IndexController as vm">
+    <header class="col-md-12">
+        <div class="header-wrapper">
+            <!--<div class="float-left">
+            <p class="site-title">-->
+            <!--<img src="LOGO.png" , alt="Home" />-->
+            <ul>
+                <li>
+                    <a ui-sref="register" ng-hide="vm.authentication.isAuthenticated">Registar</a>
+                </li>
+                <li>
+                    <a ui-sref="login" ng-hide="vm.authentication.isAuthenticated">Login</a>
+                </li>
+                <li>
+                    <a ng-hide="!vm.authentication.isAuthenticated" ng-click="vm.logout()">Logout</a>
+                </li>
+            </ul>
+            <!--</p>
+        </div>-->
         </div>
     </header>
 
@@ -67,7 +77,7 @@
 <script type="text/javascript" src="app/controllers/menu.controller.js"></script>
 <script type="text/javascript" src="app/controllers/login.controller.js"></script>
 <script type="text/javascript" src="app/controllers/register.controller.js"></script>
-
+<script type="text/javascript" src="app/controllers/index.controller.js"></script>
 
 <!-- Plugins -->
 <script type="text/javascript" src="Scripts/plugins/smart-table.min.js"></script>
