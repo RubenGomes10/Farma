@@ -36,8 +36,8 @@
                 loggedIn = true;
             }
 
-            if (error.status === 401 && !loggedIn) {
-                $injector.get('$state').go('login');
+            if (error.status === 401) {
+                $injector.get('$state').go('notauthorized');
             }
             return $q.reject(error);
         }

@@ -99,11 +99,13 @@
     <Content Include="app\directives\checkbox.directive.js" />
     <Content Include="app\directives\textbox.directive.js" />
     <Content Include="app\directives\validate-form.directive.js" />
+    <Content Include="app\helpers.js" />
     <Content Include="app\services\auth-interceptor.service.js" />
     <Content Include="app\services\auth.service.js" />
     <Content Include="app\services\account.service.js" />
     <Content Include="app\services\farmacias.service.js" />
     <Content Include="app\views\distrito-list.html" />
+    <Content Include="app\views\not-authorized.html" />
     <Content Include="app\views\register.html" />
     <Content Include="app\views\login.html" />
     <Content Include="app\views\_farmacia-form.html" />

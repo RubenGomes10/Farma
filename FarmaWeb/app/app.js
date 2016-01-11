@@ -119,11 +119,20 @@
                     controllerAs: 'vm'
                 }
             },
+        }).state('notauthorized', {
+            url: '/notauthorized',
+            views: {
+                content: {
+                    templateUrl: '/app/views/not-authorized.html',
+                    //controller: 'RegisterController',
+                    //controllerAs: 'vm'
+                }
+            },
         });
     }
 
-    run.$inject = ['$rootScope', '$state', 'usSpinnerService', 'authService'];
-    function run($rootScope, $state, usSpinnerService, authService) {
+    run.$inject = ['$rootScope', '$state', 'usSpinnerService', 'authService', 'helpers'];
+    function run($rootScope, $state, usSpinnerService, authService, helpers) {
         authService.fillData();
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             usSpinnerService.spin('spinner');
@@ -132,6 +141,13 @@
                 console.log("You must connect before you access to this url!!");
                 usSpinnerService.stop('spinner');
                 $state.go('login');
+            }
+            if (!helpers.checkRole(authService.authModel.roles, toState.roles))
+            {
+                event.preventDefault();
+                console.log("Not authorized");
+                usSpinnerService.stop('spinner');
+                $state.go('notauthorized');
             }
         });
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

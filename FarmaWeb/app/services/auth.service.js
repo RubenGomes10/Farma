@@ -53,7 +53,7 @@
             authModel.isAuthenticated = true;
             authModel.userName = loginData.userName;
             authModel.userRetrieved = false;
-            //authModel.roles = loginData.Roles;
+            fillData(); //sei que desta forma a variavel userRetrieved não está a fazer muito, mas pode ser que venha a fazer dessa maneira
             return result;
         }
 
@@ -88,8 +88,7 @@
                 if (!authModel.userRetrieved) {
                     return accountService.getUserInfo().then(function (result) {
                         authModel.userRetrieved = true;
-                        var userData = result.data;
-                        authModel.roles = result.roles;
+                        authModel.roles = result.Roles;
                     });
                 }
             }

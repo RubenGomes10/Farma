@@ -439,11 +439,16 @@ input::-webkit-inner-spin-button {
     color: #a94442;
 }
 
-/*LOGIN*/
+/*LOGIN & AUTH*/
 .form-login-heading{
     text-align: center;
     margin-bottom: 30px;
     margin-top: 80px;
+}
+
+.back-authorize{
+    text-align: center;
+    cursor: pointer;
 }
 /*******/
 
