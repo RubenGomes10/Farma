@@ -87,6 +87,7 @@
     <Content Include="app\controllers\farmacia-detail.controller.js" />
     <Content Include="app\controllers\farmacia-list.controller.js" />
     <Content Include="app\controllers\farmacia-create.controller.js" />
+    <Content Include="app\controllers\index.controller.js" />
     <Content Include="app\controllers\register.controller.js" />
     <Content Include="app\controllers\login.controller.js" />
     <Content Include="app\controllers\menu.controller.js" />

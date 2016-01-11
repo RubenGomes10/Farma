@@ -258,7 +258,7 @@ input[type="checkbox"] {
   width: auto; }
 
 header {
-  height: 8%;
+  height: 50px;
   background-color: #337ab7; }
   header .header-wrapper {
     height: 100%; }
@@ -272,7 +272,7 @@ header {
     text-decoration: none !important;
     color: #fff !important;
     line-height: 48px;
-    padding: 19px 15px;
+    padding: 17px 15px;
     cursor: pointer; }
 
 nav li a {

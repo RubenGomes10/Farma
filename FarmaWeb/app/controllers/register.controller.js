@@ -18,6 +18,7 @@
 
         function register() {
             authService.register(vm.authModel).then(function () {
+                alertify.success("User criado com sucesso");
                 $state.go('login');
             })
             .catch(function (error) {
