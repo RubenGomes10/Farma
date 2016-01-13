@@ -23,6 +23,9 @@ namespace FarmaModel
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<Farmacia> Farmacia { get; set; }
+        public virtual DbSet<TipoCliente> TipoCliente { get; set; }
+        public virtual DbSet<Agente> Agente { get; set; }
+        public virtual DbSet<Zona> Zona { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

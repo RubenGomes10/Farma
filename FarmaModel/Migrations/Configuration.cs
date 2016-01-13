@@ -15,18 +15,28 @@ namespace FarmaModel.Migrations
 
         protected override void Seed(FarmaModel.FarmaModelContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.TipoCliente.AddOrUpdate(
+                tc => tc.Nome,
+                new TipoCliente { Nome = "Tipo 1" },
+                new TipoCliente { Nome = "Tipo 2" },
+                new TipoCliente { Nome = "Tipo 3" }
+            );
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Zona.AddOrUpdate(
+                z => z.Nome,
+                new Zona { Nome = "Zona 1" },
+                new Zona { Nome = "Zona 2" },
+                new Zona { Nome = "Zona 3" }
+            );
+
+            context.Agente.AddOrUpdate(
+                a => a.Nome,
+                new Agente { Nome = "Agente 1" },
+                new Agente { Nome = "Agente 2" },
+                new Agente { Nome = "Agente 3" }
+            );
+
+            context.SaveChanges();
         }
     }
 }
