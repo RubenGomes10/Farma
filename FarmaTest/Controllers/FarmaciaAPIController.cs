@@ -25,7 +25,7 @@ namespace FarmaTest.Controllers
                 Select(x => new FarmaciaViewModel { 
                     ID = x.FarmaciaID,
                     Nome = x.Nome, 
-                    NomeDistrito = x.Distrito.Nome 
+                    NomeDistrito = x.Distrito 
                 }).ToList();
             return listaFarmacias;
         }

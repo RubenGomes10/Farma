@@ -33,7 +33,7 @@ namespace FarmaAPI.Controllers
                 {
                     ID = x.FarmaciaID,
                     Nome = x.Nome,
-                    NomeDistrito = x.Distrito.Nome
+                    NomeDistrito = x.Distrito
                 });
             int totalRecords = _repository.FarmaciaRepository.GetAll().Count();
 
@@ -58,7 +58,7 @@ namespace FarmaAPI.Controllers
             {
                 ID = farmaDetail.FarmaciaID,
                 Nome = farmaDetail.Nome,
-                NomeDistrito = farmaDetail.Distrito.Nome
+                NomeDistrito = farmaDetail.Distrito
             };
             return farmacia;
         }

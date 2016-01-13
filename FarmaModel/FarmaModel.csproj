@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Distrito.cs" />
     <Compile Include="Farmacia.cs" />
     <Compile Include="FarmaModel.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

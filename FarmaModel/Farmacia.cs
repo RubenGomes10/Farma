@@ -12,10 +12,11 @@ namespace FarmaModel
     {
         [Key]
         public int FarmaciaID { get; set; }
+
         [Display(Name="Farmácia")]
         public string Nome { get; set; }
-        [ForeignKey("Distrito")]
-        public int DistritoID { get; set; }
-        public virtual Distrito Distrito { get; set; }
+
+        [Display(Name = "Distrito")]
+        public string Distrito { get; set; }
     }
 }
