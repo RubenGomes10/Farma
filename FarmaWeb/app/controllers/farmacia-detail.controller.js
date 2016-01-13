@@ -8,7 +8,9 @@
         var vm = this;
         vm.readonly = true;
 
-        vm.model = $farmaciasService.getFarmaciaById($stateParams.id);
+        $farmaciasService.getFarmaciaById($stateParams.id).then(function (response) {
+            vm.model = response.data;
+        });
         console.log(vm.model);
         vm.listFarmaciasLink = 'farmacia';
 
@@ -23,7 +25,7 @@
 
         vm.sendForm = function sendForm() {
             console.log(vm.model);
-            $farmaciasService.createFarmacia(vm.model);
+            $farmaciasService.editFarmacia(vm.model);
         }
 
         // DATEPICKER BEGIN

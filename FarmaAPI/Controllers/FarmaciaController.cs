@@ -51,15 +51,9 @@ namespace FarmaAPI.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin, User")]
-        public FarmaciaViewModel Get(int id)
+        public Farmacia Get(int id)
         {
-            var farmaDetail = _repository.FarmaciaRepository.GetById(id);
-            FarmaciaViewModel farmacia = new FarmaciaViewModel
-            {
-                ID = farmaDetail.FarmaciaID,
-                Nome = farmaDetail.Nome,
-                NomeDistrito = farmaDetail.Distrito
-            };
+            Farmacia farmacia = _repository.FarmaciaRepository.GetById(id);
             return farmacia;
         }
 

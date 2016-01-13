@@ -29,7 +29,7 @@
             template:
                 '<div class="{{vm.cssClass}} checkbox" >' +
                     '<label>' +
-                        '<input type="checkbox" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" name="{{vm.controlId}}" ng-disabled="{{vm.isReadonly}}"/>{{vm.label}}' +
+                        '<input type="checkbox" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" name="{{vm.controlId}}" ng-disabled="vm.isReadonly"/>{{vm.label}}' +
                     '</label>' +
                 '</div>',
             controllerAs: 'vm',

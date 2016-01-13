@@ -36,10 +36,10 @@
                                 ' class="form-control" uib-datepicker-popup="dd/MM/yyyy" ng-model="vm.model"' +
                                 ' show-weeks="false" is-open="vm.flag" datepicker-options="dateOptions"' +
                                 ' show-button-bar="false" id="{{vm.controlId}}" name="{{vm.controlId}}"' +
-                                ' ng-required="{{vm.isRequired}}" date-model-format ng-readonly="{{vm.isReadonly}}" />' +
+                                ' ng-required="{{vm.isRequired}}" date-model-format ng-readonly="vm.isReadonly" />' +
                             '<span class="input-group-btn" >' +
                                 '<button type="button" class="btn btn-default datepicker-position glyph-button"' +
-                                        'ng-click="vm.toggleDate($event)" ng-disabled="{{vm.isReadonly}}">' +
+                                        'ng-click="vm.toggleDate($event)" ng-disabled="vm.isReadonly">' +
                                     '<i class="glyphicon glyphicon-calendar"></i>' +
                                 '</button>' +
                             '</span>' +

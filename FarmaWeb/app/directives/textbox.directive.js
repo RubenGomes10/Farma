@@ -53,7 +53,7 @@
             template:
                 '<div class="{{vm.cssClass}}" ng-class="{\'has-error\': vm.form.$submitted && vm.form.{{vm.controlId}}.$invalid}">' +
                     '<label for="{{vm.controlId}}">{{vm.label}}</label>' +
-                    '<input type="{{vm.type}}" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" ng-readonly="{{vm.isReadonly}}"'+
+                    '<input type="{{vm.type}}" ng-model="vm.model" class="form-control" id="{{vm.controlId}}" ng-readonly="vm.isReadonly"'+
                         'name="{{vm.controlId}}" ng-required="{{vm.isRequired}}" ng-maxlength="{{vm.maxLength}}" input-length="{{vm.maxLength}}" />' +
                 '</div>',
             controllerAs: 'vm',

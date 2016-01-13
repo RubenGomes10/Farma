@@ -11,7 +11,8 @@
             getClientType: getClientType,
             getZone: getZone,
             getFarmaciaById: getFarmaciaById,
-            createFarmacia: createFarmacia
+            createFarmacia: createFarmacia,
+            editFarmacia: editFarmacia
         };
 
         return farmaciasAPI;
@@ -79,6 +80,10 @@
 
         function createFarmacia(farmacia) {
             vm.list.push(farmacia);
+        }
+
+        function editFarmacia(farmacia) {
+            
         }
     }
 })();
