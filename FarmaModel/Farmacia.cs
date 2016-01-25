@@ -28,7 +28,7 @@ namespace FarmaModel
         public virtual Zona Zona { get; set; }
 
         [Display(Name = "Activo")]
-        public bool Activo { get; set; }
+        public bool? Activo { get; set; }
 
         [Display(Name = "NºReq Inicial")]
         public string NumReqInicial { get; set; }
@@ -40,7 +40,7 @@ namespace FarmaModel
         public DateTime? DataRescisao { get; set; }
 
         [Display(Name = "Hold")]
-        public bool Hold { get; set; }
+        public bool? Hold { get; set; }
 
         [Display(Name = "On Hold Reason")]
         public string OnHoldReason { get; set; }
@@ -89,22 +89,22 @@ namespace FarmaModel
         public virtual Agente Agente { get; set; }
 
         [Display(Name = "KIT Entregue")]
-        public bool KitEntregue { get; set; }
+        public bool? KitEntregue { get; set; }
 
         [Display(Name = "Data Entrega KIT")]
         public DateTime? DataEntregaKit { get; set; }
 
         [Display(Name = "KIT Recolhido")]
-        public bool KitRecolhido { get; set; }
+        public bool? KitRecolhido { get; set; }
 
         [Display(Name = "Data Recolha KIT")]
         public DateTime? DataRecolhaKit { get; set; }
 
         [Display(Name = "GPS Issues")]
-        public bool GpsIssues { get; set; }
+        public bool? GpsIssues { get; set; }
 
         [Display(Name = "Espaço Renovado")]
-        public string EspacoRenovado { get; set; }
+        public bool? EspacoRenovado { get; set; }
 
         [Display(Name = "Número Funcionários")]
         public int NumFuncionarios { get; set; }

@@ -21,7 +21,7 @@ namespace FarmaAPI.Controllers
         {
             this._repository = repository;
         }
-        // GET: Farmacia
+        // GET: api/farmacia
         [Authorize]
         public IHttpActionResult Get(int start, int number, string sortField, string sortDir)
         {
@@ -49,6 +49,7 @@ namespace FarmaAPI.Controllers
             return BadRequest("Não foram encontrados dados");
         }
 
+        // GET: api/farmacia/:id
         [HttpGet]
         [Authorize(Roles = "Admin, User")]
         public Farmacia Get(int id)
@@ -57,21 +58,61 @@ namespace FarmaAPI.Controllers
             return farmacia;
         }
 
-        // POST: api/test
+        // POST: api/farmacia
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public void Post([FromBody]string value)
+        public void Create([FromBody]Farmacia farmacia)
         {
+            _repository.FarmaciaRepository.Insert(farmacia);
+            _repository.Commit();
         }
 
-        // PUT: api/test/5
-        public void Put(int id, [FromBody]string value)
+        // POST: api/farmacia/:id
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public void Edit(int id, [FromBody]Farmacia edit_farmacia)
         {
+            Farmacia farmacia = _repository.FarmaciaRepository.GetById(id);
+            farmacia.Nome = edit_farmacia.Nome;
+            farmacia.Distrito = edit_farmacia.Distrito;
+			farmacia.TipoClienteID = edit_farmacia.TipoClienteID;
+			farmacia.CodigoANF = edit_farmacia.CodigoANF;
+			farmacia.NumClienteSAP = edit_farmacia.NumClienteSAP;
+			farmacia.ZonaID = edit_farmacia.ZonaID;
+			farmacia.Activo = edit_farmacia.Activo;
+			farmacia.NumReqInicial = edit_farmacia.NumReqInicial;
+			farmacia.DataInicioContrato = edit_farmacia.DataInicioContrato;
+			farmacia.DataRescisao = edit_farmacia.DataRescisao;
+			farmacia.Hold = edit_farmacia.Hold;
+			farmacia.OnHoldReason = edit_farmacia.OnHoldReason;
+			farmacia.Morada = edit_farmacia.Morada;
+			farmacia.Localidade = edit_farmacia.Localidade;
+			farmacia.CodigoPostal = edit_farmacia.CodigoPostal;
+			farmacia.LocalidadePostal = edit_farmacia.LocalidadePostal;
+			farmacia.Concelho = edit_farmacia.Concelho;
+			farmacia.ProprietarioFacturacao = edit_farmacia.ProprietarioFacturacao;
+			farmacia.NIF = edit_farmacia.NIF;
+			farmacia.DirTecnico = edit_farmacia.DirTecnico;
+			farmacia.Telefone = edit_farmacia.Telefone;
+			farmacia.Fax = edit_farmacia.Fax;
+			farmacia.Email = edit_farmacia.Email;
+			farmacia.AgenteID = edit_farmacia.AgenteID;
+			farmacia.KitEntregue = edit_farmacia.KitEntregue;
+			farmacia.DataEntregaKit = edit_farmacia.DataEntregaKit;
+			farmacia.KitRecolhido = edit_farmacia.KitRecolhido;
+			farmacia.DataRecolhaKit = edit_farmacia.DataRecolhaKit;
+			farmacia.GpsIssues = edit_farmacia.GpsIssues;
+			farmacia.EspacoRenovado = edit_farmacia.EspacoRenovado;
+			farmacia.NumFuncionarios = edit_farmacia.NumFuncionarios;
+
+            _repository.Commit();
         }
 
-        // DELETE: api/test/5
+        // DELETE: api/farmacia/5
         public void Delete(int id)
         {
+            _repository.FarmaciaRepository.Delete(id);
+            _repository.Commit();
         }
     }
 }

@@ -79,11 +79,19 @@
         }
 
         function createFarmacia(farmacia) {
-            vm.list.push(farmacia);
+            return $http({
+                method: 'POST',
+                url: config.apiURL + '/farmacia/',
+                data: farmacia
+            });
         }
 
-        function editFarmacia(farmacia) {
-            
+        function editFarmacia(id, farmacia) {
+            return $http({
+                method: 'POST',
+                url: config.apiURL + '/farmacia/' + id,
+                data: farmacia
+            });
         }
     }
 })();

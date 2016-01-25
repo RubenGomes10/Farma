@@ -47,6 +47,9 @@
 
         vm.sendForm = function sendForm() {
             console.log(vm.form);
+            vm.readonly = true;
+            vm.submitted = true;
+            $farmaciasService.createFarmacia(vm.form);
         }
 
         // DATEPICKER BEGIN
@@ -55,11 +58,11 @@
         }
         vm.minDate = new Date(1900, 11, 2);
         vm.maxDate = new Date(2060, 10, 22);
+
         ////Para acesso http
         //vm.rowCollection = $farmaciasService.getAll().success(function(data, status){
         //    return data;
         //});
         // DATEPICKER END
-
     }
 })();

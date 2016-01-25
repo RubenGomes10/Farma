@@ -16,7 +16,7 @@
         <div class="form-group row">
             <custom-checkbox control-id="Activo" label="Activo" model="vm.model.Activo" css-class="col-md-3"
                              is-readonly="vm.readonly"></custom-checkbox>
-            <custom-textbox control-id="NumReqInicial" label="Nº Req Inicial" model="vm.model.NumReqInicial" type="number"
+            <custom-textbox control-id="NumReqInicial" label="Nº Req Inicial" model="vm.model.NumReqInicial" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
 
             <custom-datepicker control-id="DataInicioContrato" label="Data Início Contrato" model="vm.model.DataInicioContrato"
@@ -29,7 +29,7 @@
         <div class="form-group row">
             <custom-checkbox control-id="Hold" label="Hold" model="vm.model.Hold" css-class="col-md-3"
                              is-readonly="vm.readonly"></custom-checkbox>
-            <custom-textbox control-id="OnHoldReason" label="On Hold Reason" model="vm.model.OnHoldReason" type="number"
+            <custom-textbox control-id="OnHoldReason" label="On Hold Reason" model="vm.model.OnHoldReason" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
@@ -41,7 +41,7 @@
         <div class="form-group row">
             <custom-textbox control-id="Morada" label="Morada" model="vm.model.Morada" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="NIF" label="NIF" model="vm.model.NIF" type="number"
+            <custom-textbox control-id="NIF" label="NIF" model="vm.model.NIF" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
@@ -53,13 +53,13 @@
         <div class="form-group row">
             <custom-textbox control-id="CodigoPostal" label="Código Postal" model="vm.model.CodigoPostal" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="Telefone" label="Telefone" model="vm.model.Telefone" type="number"
+            <custom-textbox control-id="Telefone" label="Telefone" model="vm.model.Telefone" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly" max-length="9"></custom-textbox>
         </div>
         <div class="form-group row">
             <custom-textbox control-id="LocalidadePostal" label="Localidade Postal" model="vm.model.LocalidadePostal" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-textbox control-id="Fax" label="Fax" model="vm.model.Fax" type="number"
+            <custom-textbox control-id="Fax" label="Fax" model="vm.model.Fax" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row">
@@ -92,18 +92,18 @@
                              is-readonly="vm.readonly"></custom-checkbox>
             <custom-checkbox control-id="EspacoRenovado" label="Espaço Renovado" model="vm.model.EspacoRenovado" css-class="col-md-3"
                              is-readonly="vm.readonly"></custom-checkbox>
-            <custom-checkbox control-id="NumFuncionarios" label="Número Funcionarios" model="vm.model.NumFuncionarios" css-class="col-md-3"
-                             is-readonly="vm.readonly"></custom-checkbox>
+            <custom-textbox control-id="NumFuncionarios" label="Número Funcionarios" model="vm.model.NumFuncionarios" type="text"
+                            is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
         </div>
         <div class="form-group row submit-buttons">
             <div ng-class="(vm.readonly==true) ? 'col-md-1 col-md-offset-4' : 'col-md-1 col-md-offset-4'">
                 <input type="button" ui-sref="{{vm.listFarmaciasLink}}" class="form-control btn-danger btn-sm btn btn-primary" value="Voltar" />
             </div>
             <div class="col-md-1 col-md-offset-1" ng-hide="!vm.readonly">
-                <input type="submit" ng-click="vm.readonly = false;" class="form-control btn-sm btn btn-primary" value="Editar" />
+                <input type="button" ng-click="vm.readonly = false;" class="form-control btn-sm btn btn-primary" value="Editar" />
             </div>
             <div class="col-md-1 col-md-offset-1" ng-hide="vm.readonly">
-                <input type="submit" ng-click="vm.readonly = true; vm.submitted = true;" class="form-control btn-sm btn btn-primary" value="Guardar" />
+                <input type="submit" class="form-control btn-sm btn btn-primary" value="Guardar" />
             </div>
         </div>
         <!-- Estas condições do read-only estavam aqui porque ao inicio tinha a mesma pagina para o form e para o detail -->
