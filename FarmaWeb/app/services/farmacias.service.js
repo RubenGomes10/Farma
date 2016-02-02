@@ -38,7 +38,7 @@
                     {
                         id: 1,
                         text: 'Banca'
-                   , clientType: "Banca" },
+                     },
                     {
                         id: 2,
                         text: 'Saude'

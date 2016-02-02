@@ -3,14 +3,14 @@
         <legend>Farmácia</legend>
         <div class="form-group row">
             <custom-dropdown control-id="TipoCliente" label="Tipo de Cliente" model="vm.model.TipoCliente"
-                             source="vm.TipoClienteDropdown" set-data="vm.getTipoClienteDropdownSrc()"
+                             source="vm.clientTypeDropdown" set-data="vm.getClientTypeDropdownSrc()"
                              is-required="false" form="farmaciaForm" css-class="custom-dropdown col-md-3" is-readonly="vm.readonly"></custom-dropdown>
             <custom-textbox control-id="CodigoANF" label="Código ANF" model="vm.model.CodigoANF" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
             <custom-textbox control-id="NumClienteSAP" label="Nº Cliente SAP" model="vm.model.NumClienteSAP" type="text"
                             is-required="false" form="farmaciaForm" css-class="col-md-3" is-readonly="vm.readonly"></custom-textbox>
-            <custom-dropdown control-id="ZonaID" label="Zona" model="vm.model.ZonaID" source="vm.ZonaDropdown"
-                             set-data="vm.getZonaDropdownSrc()" is-required="false" form="farmaciaForm"
+            <custom-dropdown control-id="ZonaID" label="Zona" model="vm.model.ZonaID" source="vm.zoneDropdown"
+                             set-data="vm.getZoneDropdownSrc()" is-required="false" form="farmaciaForm"
                              css-class="custom-dropdown col-md-3" is-readonly="vm.readonly"></custom-dropdown>
         </div>
         <div class="form-group row">

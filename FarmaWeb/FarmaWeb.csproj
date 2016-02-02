@@ -87,6 +87,7 @@
     <Content Include="app\controllers\farmacia-detail.controller.js" />
     <Content Include="app\controllers\farmacia-list.controller.js" />
     <Content Include="app\controllers\farmacia-create.controller.js" />
+    <Content Include="app\controllers\not-authorized.controller.js" />
     <Content Include="app\controllers\index.controller.js" />
     <Content Include="app\controllers\register.controller.js" />
     <Content Include="app\controllers\login.controller.js" />
@@ -120,11 +121,11 @@
     <Content Include="Content\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\ui-bootstrap-csp.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
@@ -893,8 +894,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\bootstrap.css.map" />
     <Content Include="Content\app.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>

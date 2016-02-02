@@ -457,6 +457,11 @@ input::-webkit-inner-spin-button {
   text-align: center;
   cursor: pointer; }
 
+#authDiv {
+  text-align: center; }
+  #authDiv h4 {
+    display: inline-block; }
+
 /*******/
 @media only screen and (max-width: 480px) {
   .main-content {

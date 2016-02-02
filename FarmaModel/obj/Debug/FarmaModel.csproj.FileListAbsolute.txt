@@ -26,3 +26,4 @@ C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.xml
 C:\Users\userr\Documents\FarmaProject\FarmaModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\userr\Documents\FarmaProject\FarmaModel\obj\Debug\FarmaModel.dll
 C:\Users\userr\Documents\FarmaProject\FarmaModel\obj\Debug\FarmaModel.pdb
+C:\Users\userr\Documents\FarmaProject\FarmaModel\obj\Debug\FarmaModel.csprojResolveAssemblyReference.cache

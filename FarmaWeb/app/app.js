@@ -124,8 +124,8 @@
             views: {
                 content: {
                     templateUrl: '/app/views/not-authorized.html',
-                    //controller: 'RegisterController',
-                    //controllerAs: 'vm'
+                    controller: 'NotAuthController',
+                    controllerAs: 'vm'
                 }
             },
         });

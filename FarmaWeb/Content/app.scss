@@ -450,6 +450,13 @@ input::-webkit-inner-spin-button {
     text-align: center;
     cursor: pointer;
 }
+
+#authDiv{
+    text-align: center;
+     & h4{
+        display:inline-block;
+    }
+ }
 /*******/
 
 @import "small-screen";
